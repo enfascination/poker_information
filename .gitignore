@@ -3,3 +3,4 @@
 *.csv
 *.Rdata
 *.Rout
+local_settings.r

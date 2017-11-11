@@ -1,6 +1,5 @@
 #!/usr/bin/env Rscript
-pathLocal <- "~/projecto/research_projects/poker_information/"
-source(paste0(pathLocal, "local_settings.r"))
+source("local_settings.r")
 source(paste0(pathLocal, "info_decomp_fns006.r"))
 
 

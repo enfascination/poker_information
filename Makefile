@@ -77,7 +77,7 @@ discoverySetup:
 	cd project_staid/poker_information
 	gunzip PS0025pokerhandrank.csv.gz
 	cd research_projects/poker_information
-	git pull git@github.com:enfascination/poker_information.git .
+	git clone https://github.com/enfascination/poker_information.git .
 
 discoveryStart:
 	module load R
