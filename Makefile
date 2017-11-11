@@ -35,6 +35,8 @@ fromHandStreetPlayer:
 	rm distrPS0025_*.csv
 	echo "Data is now compressed to one street in one hand per row"
 
+discoveryRep:
+	make fromHandStreetBig
 
 version = 62
 
@@ -64,3 +66,24 @@ misc:
 	echo "also get player countrs by processing all files like distrPS0025playercounts.csv, possibly in this file:pokermisstatsfromplayercsv001"
 	./pokermisstatsfromplayercsv001.r
 
+discoverySetup:
+	mkdir research_projects
+	mkdir research_projects/poker_information
+	mkdir project_staid
+	mkdir project_staid/poker_information
+	echo "now copy data over from staid"
+	### scp ~/projecto_staid/poker_information/PS0025pokerhandrank.csv.gz sfrey@discovery.dartmouth.edu
+	### scp ~/projecto_staid/poker_information/PS0025pokerhandrank.csv.gz sfrey@discovery.dartmouth.edu
+	cd project_staid/poker_information
+	gunzip PS0025pokerhandrank.csv.gz
+	cd research_projects/poker_information
+	git pull git@github.com:enfascination/poker_information.git .
+
+discoveryStart:
+	module load R
+	make discoveryRep
+	#./pokerstatedistribution006.r -f ~/projecto_staid/poker_information/PS0600pokerhandrank.csv -o distrPS0600
+
+discoveryRemove:
+	rm -rf projecto_staid/poker_information
+	rm -rf research_projects/poker_information
