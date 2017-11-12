@@ -9,4 +9,9 @@ packageLoad<-function(libName){
                 stop(paste("Package ",libName," not found and its installation failed."))
                                             }
 }
-packageLoad("abind")
+packagesLoad<-function(libs){
+	for (l in libs){
+		packageLoad(l)
+	}
+}
+packagesLoad(c("abind", "ggplot2", "ggthemes", "optparse", "plyr", "infotheo", "testit", "stringi", "data.table", "bit64", "abind", "gridExtra", "sqldf"))
