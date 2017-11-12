@@ -78,10 +78,18 @@ discoverySetup:
 	gunzip PS0025pokerhandrank.csv.gz
 	cd research_projects/poker_information
 	git clone https://github.com/enfascination/poker_information.git .
+	cp local_settings.r.sample local_settings.r
+	cat "pathLocal <- '~/research_projects/poker_information'" >> local_settings.r
+	cat "pathData <- '~/project_staid/poker_information'" >> local_settings.r
+	mkdir ~/lib
+	mkdir ~/lib/RPackages
+	export R_LIBS_USER="~sfrey/lib/RPackages"
+	./cluster_setup.r
 
 discoveryStart:
 	module load R
-	make discoveryRep
+	export R_LIBS_USER="~sfrey/lib/RPackages"
+	./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
 	#./pokerstatedistribution006.r -f ~/projecto_staid/poker_information/PS0600pokerhandrank.csv -o distrPS0600
 
 discoveryRemove:
