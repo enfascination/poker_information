@@ -69,7 +69,8 @@ if (analysis_tag == "hash_wagers") {
 }
 
 path_poker <- pathLocal
-path_poker_data <- paste0(pathLocal, analysis_tag, "_", increment_me, "/")
+path_poker_data_in <- pathData
+path_poker_data_out <- paste0(pathData, analysis_tag, "_", increment_me, "/")
 dir.create(path_poker_data)
 
 
@@ -85,7 +86,7 @@ dist_l_all <- list()
 print("main decomposition: 25 cents")
     print(blinds_fine[7])
     out_file <- paste0(path_poker_data, "poker_distributions_2p_PS_small", ".Rdata")
-    in_file <- paste0(path_poker, "distrPS", blinds_fine[7], ".csv")
+    in_file <- paste0(path_poker_data_in, "distrPS", blinds_fine[7], ".csv")
     dist_l <- fread(in_file)
     if (tagopts$riskmemorycrash) {
         dist_l_all[[7]] <- dist_l
@@ -103,7 +104,7 @@ print("main decomposition: all other blinds")
 dist_l  <- data.table()
 for(ib in 1:(length(blinds_fine)-1)) {
     print(blinds_fine[ib])
-    in_file <- paste0(path_poker, "distrPS", blinds_fine[ib], ".csv")
+    in_file <- paste0(path_poker_data_in, "distrPS", blinds_fine[ib], ".csv")
 	tmp <- fread(in_file)
 	tmp[,hand:=as.integer64(hand)]
     dist_l <- rbind(dist_l, tmp)
@@ -178,7 +179,7 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
     n_streets <- 4
     ### 25 cents
         print(blinds_fine[7])
-        in_file <- paste0(path_poker, "distrPS", blinds_fine[7], ".csv")
+        in_file <- paste0(path_poker_data_in, "distrPS", blinds_fine[7], ".csv")
         dist_l <- fread(in_file)
         for(st in 1:n_streets) {
             out_file <- paste0(path_poker_data, "poker_distributions_2p_PS_", "small", "_st", st, ".Rdata")
@@ -188,7 +189,7 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
     dist_l  <- data.table()
     for(ib in 1:(length(blinds_fine)-1)) {
         print(blinds_fine[ib])
-        in_file <- paste0(path_poker, "distrPS", blinds_fine[ib], ".csv")
+        in_file <- paste0(path_poker_data_in, "distrPS", blinds_fine[ib], ".csv")
         tmp <- fread(in_file)
         tmp[,hand:=as.integer64(hand)]
         dist_l <- rbind(dist_l, tmp)
