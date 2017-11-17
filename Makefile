@@ -49,8 +49,8 @@ fromHandStreet:
 fromHandStreetBig:
 	#./buildpokerdistribution020.r --tag=hash_wagers --reps=500 --quiet --version=$(version)
 	./buildpokerdistribution020.r --tag=hash_actions --reps=500 --quiet --version=$(version)
-	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(version)
 	./buildpokerdistribution020.r --tag=actions_shownhands --reps=500 --quiet --version=$(version)
+	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(version)
 
 fromHandStreetTest:
 	./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
@@ -87,7 +87,6 @@ discoverySetup:
 	./cluster_setup.r
 
 discoveryStart:
-	module load R
 	export R_LIBS_USER="~sfrey/lib/RPackages"
 	./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
 	#./pokerstatedistribution006.r -f ~/projecto_staid/poker_information/PS0600pokerhandrank.csv -o distrPS0600
