@@ -1,3 +1,0 @@
-analysis_increment <- "50"
-pathLocal <- ""
-#pathLocal <- "~/projecto/research_projects/poker_information/"
