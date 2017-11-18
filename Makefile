@@ -135,13 +135,7 @@ polarisSetup:
 	#make ln -s to scratch
 
 polarisStartChug0025:
-	screen
-	export R_LIBS_USER="~sfrey/lib/RPackages"
-	#./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
-	#./pokerstatedistribution006.r -f ~/projecto_staid/poker_information/PS0600pokerhandrank.csv -o distrPS0600
-	./pokerstatedistribution006.r -f /scratch-ssid/f002mmt/PS0025pokerhandrank.csv -o distrPS0025_full
+	./pokerstatedistribution006.r -f /scratch-ssd/f002mmt/PS0025pokerhandrank.csv -o distrPS0025_whole
 polarisStartDists:
-	screen
-	export R_LIBS_USER="~sfrey/lib/RPackages"
-	#./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
+	./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
 
