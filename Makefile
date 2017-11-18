@@ -133,6 +133,7 @@ polarisSetup:
 	echo now fix last line of that file
 	cd research_projects/poker_information
 	./cluster_setup.r
+	./cluster_setup.r #again, to identify errors
 	#make ln -s to scratch
 
 polarisStartChug0025:
