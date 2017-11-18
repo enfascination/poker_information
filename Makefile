@@ -96,7 +96,6 @@ discoveryInteractive:
 	qsub -q default -I -l feature="cellf" -l nodes=1:ppn=1 -l walltime=72:00:00
 
 discoveryStart:
-	screen
 	export R_LIBS_USER="~sfrey/lib/RPackages"
 	#./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
 	#./pokerstatedistribution006.r -f ~/projecto_staid/poker_information/PS0600pokerhandrank.csv -o distrPS0600
