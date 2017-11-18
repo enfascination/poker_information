@@ -71,7 +71,7 @@ if (analysis_tag == "hash_wagers") {
 path_poker <- pathLocal
 path_poker_data_in <- pathData
 path_poker_data_out <- paste0(pathData, analysis_tag, "_", increment_me, "/")
-dir.create(path_poker_data)
+dir.create(path_poker_data_out)
 
 
 ### START SAMPLING
@@ -85,7 +85,7 @@ dist_l_all <- list()
 ### create Proficient and Nonnproficient categories from >25cent and 25 cent blinds.
 print("main decomposition: 25 cents")
     print(blinds_fine[7])
-    out_file <- paste0(path_poker_data, "poker_distributions_2p_PS_small", ".Rdata")
+    out_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_small", ".Rdata")
     in_file <- paste0(path_poker_data_in, "distrPS", blinds_fine[7], ".csv")
     dist_l <- fread(in_file)
     if (tagopts$riskmemorycrash) {
@@ -97,7 +97,7 @@ print("main decomposition: 25 cents")
     print(paste0("number of hands: ", dist_l[,length(unique(hand))]))
     bootstrap_distributions_to_file(data.matrix(dist_l), output_file=out_file, reps, ordered=tagopts$ordered, extrAsWagerOrAction=tagopts$extr)
     for(st in 1:n_streets) {
-        out_file <- paste0(path_poker_data, "poker_distributions_2p_PS_", "small", "_st", st, ".Rdata")
+        out_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_", "small", "_st", st, ".Rdata")
         bootstrap_distributions_to_file(data.matrix(dist_l[street==st]), output_file=out_file, reps, ordered=tagopts$ordered, extrAsWagerOrAction=tagopts$extr)
     }
 print("main decomposition: all other blinds")
@@ -120,17 +120,17 @@ for(ib in 1:(length(blinds_fine)-1)) {
     print(paste0("total hands: ", dist_l[,length(unique(hand))]))
     print(paste0("total rows: ", nrow(dist_l)))
 }
-out_file <- paste0(path_poker_data, "poker_distributions_2p_PS_large.Rdata")
+out_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_large.Rdata")
 bootstrap_distributions_to_file(data.matrix(dist_l), output_file=out_file, reps, ordered=tagopts$ordered, extrAsWagerOrAction=tagopts$extr)
 for(st in 1:n_streets) {
-    out_file <- paste0(path_poker_data, "poker_distributions_2p_PS_", "large", "_st", st, ".Rdata")
+    out_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_", "large", "_st", st, ".Rdata")
     bootstrap_distributions_to_file(data.matrix(dist_l[street==st]), output_file=out_file, reps, ordered=tagopts$ordered, extrAsWagerOrAction=tagopts$extr)
 }
 
 ###    RELOAD THE SAMPLES THEN CONSOLIDATE
 stat_long_2p_list <- rep(list(0),length(blinds_coarse))
 for(ib in 1:length(blinds_coarse)) {
-    in_file <- paste0(path_poker_data, "poker_distributions_2p_PS_", blinds_coarse[ib], ".Rdata")
+    in_file <- paste0(path_poker_data_in, "poker_distributions_2p_PS_", blinds_coarse[ib], ".Rdata")
         ppsite <- "PS"; ppblind <- blinds_coarse[ib];
         stat_long_2p_list[[ib]] <- cbind(
                                             build_stat_long_2p(get_statistics_2p_from_file(in_file,specific=NA, quiet=tagopts$quiet, onlyObsHands=tagopts$showdowned ))
@@ -154,7 +154,7 @@ il <- 1
 for(ib in 1:length(blinds_coarse)) {
     print(blinds_coarse[ib])
     for(channel in 1:n_channels) {
-        in_file <- paste0(path_poker_data, "poker_distributions_2p_PS_", blinds_coarse[ib], ".Rdata")
+        in_file <- paste0(path_poker_data_in, "poker_distributions_2p_PS_", blinds_coarse[ib], ".Rdata")
         ppsite <- "PS"; ppblind <- blinds_coarse[ib];
         stat_long_2p_spec_list[[il]] <- cbind(
                                             build_stat_long_2p(get_statistics_2p_from_file(in_file,specific=channel, quiet=tagopts$quiet, onlyObsHands=tagopts$showdowned))
@@ -182,7 +182,7 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
         in_file <- paste0(path_poker_data_in, "distrPS", blinds_fine[7], ".csv")
         dist_l <- fread(in_file)
         for(st in 1:n_streets) {
-            out_file <- paste0(path_poker_data, "poker_distributions_2p_PS_", "small", "_st", st, ".Rdata")
+            out_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_", "small", "_st", st, ".Rdata")
             bootstrap_distributions_to_file(data.matrix(dist_l[street==st]), output_file=out_file, reps, ordered=tagopts$ordered, extrAsWagerOrAction=tagopts$extr)
         }
     ### bigger blinds
@@ -195,7 +195,7 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
         dist_l <- rbind(dist_l, tmp)
     }
     for(st in 1:n_streets) {
-        out_file <- paste0(path_poker_data, "poker_distributions_2p_PS_", "large", "_st", st, ".Rdata")
+        out_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_", "large", "_st", st, ".Rdata")
         bootstrap_distributions_to_file(data.matrix(dist_l[street==st]), output_file=out_file, reps, ordered=tagopts$ordered, extrAsWagerOrAction=tagopts$extr)
     }
     }
@@ -204,7 +204,7 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
     il <- 1
     for(ib in 1:length(blinds_coarse)) {
         for(st in 1:n_streets) {
-            in_file <- paste0(path_poker_data, "poker_distributions_2p_PS_", blinds_coarse[ib], "_st", st, ".Rdata")
+            in_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_", blinds_coarse[ib], "_st", st, ".Rdata")
             ppsite <- "PS"; ppblind <- blinds_coarse[ib];
             stat_long_2p_st_list[[il]] <- cbind(
                                                 build_stat_long_2p(get_statistics_2p_from_file(in_file,specific=NA, quiet=tagopts$quiet, onlyObsHands=tagopts$showdowned))
@@ -230,7 +230,7 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
 #increment_me <- "040_preflop"
 #increment_me <- "040_unordered"
 #increment_me <- "040"
-save(list=objsToSave, file=paste0(path_poker_data, "poker_graph_ready_data", ".Rdata"))
+save(list=objsToSave, file=paste0(path_poker_data_out, "poker_graph_ready_data", ".Rdata"))
 
 
 if (0 == "i want to calculate by street, but this hasn't been updated") {
