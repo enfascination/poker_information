@@ -321,7 +321,7 @@ bootstrap_distributions_2p <- function(dist_l, reps, ordered=F, ...) {
 }
 bootstrap_distributions_2p_par <- function(dist_l, reps, ordered=F, ...) {
   dist_l_filt <- dist_l_filtering_2p( dist_l, ... ) ### filter
-  distributions <- foreach(e=1:reps, .combine='rbind') %dopar% {
+  distributions <- foreach(e=1:reps, .export=c('build_poker_distribution_2p')) %dopar% {
 		print(e)
 		build_poker_distribution_2p(dist_l_filt, ordered=ordered)
   }
