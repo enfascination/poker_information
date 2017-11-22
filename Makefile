@@ -39,7 +39,7 @@ fromHandStreetPlayer:
 discoveryRep:
 	make fromHandStreetBig
 
-version = 62
+version = 63
 
 fromHandStreet:
 	#./buildpokerdistribution020.r --tag=hash_wagers --reps=50 --version=$(version)
