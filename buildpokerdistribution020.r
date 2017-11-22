@@ -4,6 +4,8 @@ source(paste0(pathLocal, "info_decomp_fns006.r"))
 
 library(foreach)
 library(doParallel)
+cl<-makeCluster(nCores, outfile="")
+registerDoParallel(cl)
 
 
 ### process argsif run as script, otherwise this will runfine in console on test settings
@@ -130,8 +132,6 @@ for(st in 1:n_streets) {
     bootstrap_distributions_to_file(data.matrix(dist_l[street==st]), output_file=out_file, reps, ordered=tagopts$ordered, extrAsWagerOrAction=tagopts$extr)
 }
 
-cl<-makeCluster(nCores, outfile="")
-registerDoParallel(cl)
 ###    RELOAD THE SAMPLES THEN CONSOLIDATE
 stat_long_2p_list <- rep(list(0),length(blinds_coarse))
 for(ib in 1:length(blinds_coarse)) {
