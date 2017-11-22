@@ -130,7 +130,7 @@ for(st in 1:n_streets) {
 ###    RELOAD THE SAMPLES THEN CONSOLIDATE
 stat_long_2p_list <- rep(list(0),length(blinds_coarse))
 for(ib in 1:length(blinds_coarse)) {
-    in_file <- paste0(path_poker_data_in, "poker_distributions_2p_PS_", blinds_coarse[ib], ".Rdata")
+    in_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_", blinds_coarse[ib], ".Rdata")
         ppsite <- "PS"; ppblind <- blinds_coarse[ib];
         stat_long_2p_list[[ib]] <- cbind(
                                             build_stat_long_2p(get_statistics_2p_from_file(in_file,specific=NA, quiet=tagopts$quiet, onlyObsHands=tagopts$showdowned ))
@@ -154,7 +154,7 @@ il <- 1
 for(ib in 1:length(blinds_coarse)) {
     print(blinds_coarse[ib])
     for(channel in 1:n_channels) {
-        in_file <- paste0(path_poker_data_in, "poker_distributions_2p_PS_", blinds_coarse[ib], ".Rdata")
+        in_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_", blinds_coarse[ib], ".Rdata")
         ppsite <- "PS"; ppblind <- blinds_coarse[ib];
         stat_long_2p_spec_list[[il]] <- cbind(
                                             build_stat_long_2p(get_statistics_2p_from_file(in_file,specific=channel, quiet=tagopts$quiet, onlyObsHands=tagopts$showdowned))
