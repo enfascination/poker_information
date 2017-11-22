@@ -53,6 +53,17 @@ fromHandStreetBig:
 	./buildpokerdistribution020.r --tag=actions_shownhands --reps=500 --quiet --version=$(version)
 	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(version)
 
+#make -j fromHandStreetBigPar
+fromHandStreetBigPar: par1 par2 par3
+	echo making all
+par1:
+	#./buildpokerdistribution020.r --tag=hash_wagers --reps=500 --quiet --version=$(version)
+	./buildpokerdistribution020.r --tag=hash_actions --reps=500 --quiet --version=$(version)
+par2:
+	./buildpokerdistribution020.r --tag=actions_shownhands --reps=500 --quiet --version=$(version)
+par3:
+	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(version)
+
 fromHandStreetTest:
 	./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
 	./pokergraphs020.r -v 0

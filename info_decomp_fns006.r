@@ -4,6 +4,8 @@ library(abind)
 library(ggthemes)
 library(data.table)
 require(bit64)
+library(foreach)
+library(doParallel)
 
 ### help functions
 `%ni%` = Negate(`%in%`) 
@@ -317,10 +319,19 @@ bootstrap_distributions_2p <- function(dist_l, reps, ordered=F, ...) {
   }
   return(distributions)
 }
+bootstrap_distributions_2p_par <- function(dist_l, reps, ordered=F, ...) {
+  dist_l_filt <- dist_l_filtering_2p( dist_l, ... ) ### filter
+  distributions <- foreach(e=1:reps, .combine='rbind') %dopar% {
+		print(e)
+		build_poker_distribution_2p(dist_l_filt, ordered=ordered)
+  }
+  return(distributions)
+}
 
 bootstrap_distributions_to_file <- function(dist_l, output_file, reps, ordered=NA, ...) {
     Sys.time()
-    distributions <- bootstrap_distributions_2p(dist_l, reps, ordered=ordered, ...)
+    #distributions <- bootstrap_distributions_2p(dist_l, reps, ordered=ordered, ...)
+    distributions <- bootstrap_distributions_2p_par(dist_l, reps, ordered=ordered, ...)
     save(distributions, file=output_file)
     Sys.time()
 }

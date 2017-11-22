@@ -14,4 +14,4 @@ packagesLoad<-function(libs){
 		packageLoad(l)
 	}
 }
-packagesLoad(c("abind", "ggplot2", "ggthemes", "optparse", "plyr", "infotheo", "testit", "stringi", "data.table", "bit64", "abind", "gridExtra", "sqldf"))
+packagesLoad(c("abind", "ggplot2", "ggthemes", "optparse", "plyr", "infotheo", "testit", "stringi", "data.table", "bit64", "abind", "gridExtra", "sqldf", "doParallel", "foreach"))

@@ -2,6 +2,11 @@
 source("local_settings.r")
 source(paste0(pathLocal, "info_decomp_fns006.r"))
 
+library(foreach)
+library(doParallel)
+cl<-makeCluster(nCores)
+registerDoParallel(cl)
+
 
 ### process argsif run as script, otherwise this will runfine in console on test settings
 library(optparse)
@@ -224,6 +229,7 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
     objsToSave <- c("stat_long_2p", "stat_long_2p_spec")
 }
 
+stopCluster(cl)
 
 ### WRITE IT ALL, ALL THREE stat_long OBJECTS TO AN RDATA FILE
 #increment_me <- "040_showdown"
