@@ -1,5 +1,6 @@
 #!/usr/bin/env Rscript
-source("~/projecto/research_projects/poker_information/info_decomp_fns006.r")
+source("local_settings.r")
+source(paste0(pathLocal, "info_decomp_fns006.r"))
 
 get_single_subdist <- function(dist4,d) { return( apply(dist4,d,sum)/sum( apply(dist4,d,sum) )) }
 get_mean_subdist <- function(dist4list, d, facet) {
@@ -34,38 +35,22 @@ get_poker_stats_on_dists <- function(input_file) {
   #return(distributions)
 }
 
-increment_me <- "040"
 #increment_me <- "021"
+#increment_me <- "040"
+increment_me <- "63"
 
-path_poker <- "~/projecto/research_projects/poker_information/"
-#file_ABS_1000 <- paste(path_poker, "poker_distributions_2p_ABS_1000_", increment_me, ".Rdata", sep='')
-#file_ABS_0600 <- paste(path_poker, "poker_distributions_2p_ABS_0600_", increment_me, ".Rdata", sep='')
-#file_ABS_0400 <- paste(path_poker, "poker_distributions_2p_ABS_0400_", increment_me, ".Rdata", sep='')
-#file_ABS_0200 <- paste(path_poker, "poker_distributions_2p_ABS_0200_", increment_me, ".Rdata", sep='')
-#file_ABS_0100 <- paste(path_poker, "poker_distributions_2p_ABS_0100_", increment_me, ".Rdata", sep='')
-#file_ABS_0050 <- paste(path_poker, "poker_distributions_2p_ABS_0050_", increment_me, ".Rdata", sep='')
-file_PS_1000 <- paste(path_poker, "poker_distributions_2p_PS_1000_", increment_me, ".Rdata", sep='')
-file_PS_0600 <- paste(path_poker, "poker_distributions_2p_PS_0600_", increment_me, ".Rdata", sep='')
-file_PS_0400 <- paste(path_poker, "poker_distributions_2p_PS_0400_", increment_me, ".Rdata", sep='')
-file_PS_0200 <- paste(path_poker, "poker_distributions_2p_PS_0200_", increment_me, ".Rdata", sep='')
-file_PS_0100 <- paste(path_poker, "poker_distributions_2p_PS_0100_", increment_me, ".Rdata", sep='')
-file_PS_0050 <- paste(path_poker, "poker_distributions_2p_PS_0050_", increment_me, ".Rdata", sep='')
-file_PS_0025 <- paste(path_poker, "poker_distributions_2p_PS_0025_", increment_me, ".Rdata", sep='')
+path_poker_actions_data <- paste0(pathLocal, "hash_actions", "_", increment_me, "/")
+#path_poker_wagers_data <- paste0(pathLocal, "hash_wagers", "_", increment_me, "/")
+path_poker_unordered_data <- paste0(pathLocal, "wagers_unordered", "_", increment_me, "/")
+path_poker_shownonly_data <- paste0(pathLocal, "wagers_shownhands", "_", increment_me, "/")
 
-get_poker_stats_on_dists (file_PS_0025)
-get_poker_stats_on_dists(file_PS_0050)
-get_poker_stats_on_dists(file_PS_0100)
-get_poker_stats_on_dists(file_PS_0200)
-get_poker_stats_on_dists(file_PS_0400)
-get_poker_stats_on_dists(file_PS_0600)
-get_poker_stats_on_dists(file_PS_1000)
-get_poker_totals (file_PS_0025)
-get_poker_totals(file_PS_0050)
-get_poker_totals(file_PS_0100)
-get_poker_totals(file_PS_0200)
-get_poker_totals(file_PS_0400)
-get_poker_totals(file_PS_0600)
-get_poker_totals(file_PS_1000)
+file_PS_small <- paste(path_poker, "poker_distributions_2p_PS_small_", increment_me, ".Rdata", sep='')
+file_PS_large <- paste(path_poker, "poker_distributions_2p_PS_large_", increment_me, ".Rdata", sep='')
+
+get_poker_stats_on_dists(file_PS_small)
+get_poker_stats_on_dists(file_PS_large)
+get_poker_totals(file_PS_small)
+get_poker_totals(file_PS_large)
 
 
 #expr `cat ../../../projecto_staid/poker_information/distrPS0025_4.csv | egrep -o  "^[^,]*?,[^,]*?,2,.*$" | wc -l` / 5

@@ -3,6 +3,7 @@ source("~/projecto/research_projects/poker_information/info_decomp_fns006.r")
 
 library(data.table)
 require(bit64) ### to suppress warning
+library(sqldf)
 
 path_poker <- "~/projecto/research_projects/poker_information/"
 sk <- rbind( fread(paste0( path_poker, "distrPS0050playercounts.csv"))
@@ -16,7 +17,6 @@ sk <- rbind( fread(paste0( path_poker, "distrPS0050playercounts.csv"))
 
 
 ### USE:
-### library(sqldf)
 sqldf("SELECT blnd, skill, AVG(hand_n), MEDIAN(hand_n), MIN(hand_n), MAX(hand_n)  FROM sk GROUP BY blnd, skill;")
 
 get_poker_player_stats <- function(input){
