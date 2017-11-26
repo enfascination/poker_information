@@ -11,10 +11,15 @@ library(doParallel)
 `%ni%` = Negate(`%in%`) 
 
 ### data handing functions
-dist_l_filtering_2p <- function(dist_l, extrAsWagerOrAction="wagers") {
+dist_l_filtering_2p <- function(dist_l, extrAsWagerOrAction="wagers", keepID=FALSE) {
   ### subset to tables of two people
-  dist_l <- as.matrix(dist_l[dist_l[,"seats"] ==2,c("street", "skil1", "extr11", "extr21", "intr1", "skil2", "extr12", "extr22", "intr2")])
-  colnames(dist_l) <- c("street", "skil1", "extr1", "act1", "intr1", "skil2", "extr2", "act2", "intr2")
+	if(!keepID) {
+		dist_l <- as.matrix(dist_l[dist_l[,"seats"] ==2,c("street", "skil1", "extr11", "extr21", "intr1", "skil2", "extr12", "extr22", "intr2")])
+		colnames(dist_l) <- c("street", "skil1", "extr1", "act1", "intr1", "skil2", "extr2", "act2", "intr2")
+	} else {
+		dist_l <- as.matrix(dist_l[dist_l[,"seats"] ==2,c("hand", "seats", "blind", "street", "skil1", "extr11", "extr21", "intr1", "skil2", "extr12", "extr22", "intr2")])
+		colnames(dist_l) <- c("hand", "seats", "blind", "street", "skil1", "extr1", "act1", "intr1", "skil2", "extr2", "act2", "intr2")
+	}
   #print(summary(dist_l))
   #print(str(dist_l))
   #### get rid of middle players.   NO WAIT, don't.  now I need them for accurate estimates on the 'other' category.  just keep in mind that skil was used as an index in counting for some distributions, like the deprecated 2-d distribution for calculating entropy badly.  
@@ -49,7 +54,11 @@ dist_l_filtering_2p <- function(dist_l, extrAsWagerOrAction="wagers") {
 	colnames(dist_l)[which(colnames(dist_l) %in% c("extr1", "act1", "extr2", "act2"))] <- c("extr1_real", "extr1", "extr2_real", "extr2" )
   }
 
-  return(dist_l[,c("street", "skil1", "extr1", "intr1", "skil2", "extr2", "intr2")])
+  if (!keepID) {
+	return(dist_l[,c("street", "skil1", "extr1", "intr1", "skil2", "extr2", "intr2")])
+  } else {
+	return(dist_l[,c("hand", "seats", "blind", "street", "skil1", "extr1", "intr1", "skil2", "extr2", "intr2")])
+  }
 }
 
 ### end 2 player chugging fns
