@@ -106,4 +106,5 @@ dtsamp[,state:=factor(state, levels=c("weak", "medium", "strong"))]
 dtsamp[,variable:=factor(variable, levels=c("A1", "A2", "P1"), labels=c("Output: P1 action", "Input: P2 action", "Input: P1 cards"))]
 
 fig <- ggplot(dtsamp, aes(x=state, y=percentage, group=player, fill=player)) + geom_bar(position = "dodge", stat = "summary", fun.y = "mean")  + stat_summary(fun.data = mean_se, geom = "errorbar", position="dodge") + facet_wrap(~variable, ncol=1) + theme_few() + theme(aspect.ratio=0.6, legend.position="bottom", panel.spacing.y=unit(0.5, "cm")) 
+fig <- ggplot(dtsamp, aes(x=state, y=percentage, group=player, fill=player)) + geom_bar(position = "dodge", stat = "summary", fun.y = "mean")  + stat_summary(fun.data=mean_ci, geom="errorbar", position="dodge") + facet_wrap(~variable, ncol=1) + theme_few() + theme(aspect.ratio=0.6, legend.position="bottom", panel.spacing.y=unit(0.5, "cm")) 
 ggsave( fig , filename=paste(path_poker_images, "dist_descriptive", increment_me, sub_increment, ".pdf", sep=''), height=175, width=60, units="mm", scale=1.3)
