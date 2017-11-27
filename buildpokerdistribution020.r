@@ -4,7 +4,7 @@ source(paste0(pathLocal, "info_decomp_fns006.r"))
 
 library(foreach)
 library(doParallel)
-cl<-makeCluster(nCores)
+cl<-makeCluster(nCores, outfile="")
 registerDoParallel(cl)
 
 
