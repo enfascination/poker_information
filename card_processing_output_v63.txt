@@ -1,0 +1,1266 @@
+##### ##### #####
+##### 0025
+##### ##### #####
+
+[sfrey@polaris-new poker_information]$ ./pokerstatedistribution006.r -f /scratch-ssd/f002mmt/PS0025pokerhandrank.csv -o distrPS0025
+...
+Read 134574300 rows and 12 (of 12) columns from 6.466 GB file in 00:01:24
+...
+
+[5,]              0.25
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:17 3 0.25 2712875 FALSE TRUE"
+            hand   IDs street seats  bet order_seat order_play button act2
+[1,] 60376306582   422      3     8 0.00          1          0      0    0
+[2,] 60376306582  6672      3     8 0.10          2          0      0    0
+[3,] 60376306582 25679      3     8 0.00          3          0      0    0
+[4,] 60376306582 37720      3     8 0.25          4          0      0    2
+[5,] 60376306582 51481      3     8 0.00          5          0      0    0
+[6,] 60376306582 61935      3     8 0.00          6          0      0    0
+[7,] 60376306582 67295      3     8 0.00          7          0      0    0
+[8,] 60376306582 78453      3     8 0.35          8          0      0    1
+     uncalled_bet_size
+[1,]              0.00
+[2,]              0.00
+[3,]              0.00
+[4,]              0.25
+[5,]              0.00
+[6,]              0.00
+[7,]              0.00
+[8,]              0.00
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:18 4 3.1 2795640 FALSE TRUE"
+            hand   IDs street seats  bet order_seat order_play button act2
+[1,] 60398255260   490      4     6 0.00          1          0      0    0
+[2,] 60398255260  1312      4     6 6.35          2          0      0    1
+[3,] 60398255260  9049      4     6 0.00          3          0      0    0
+[4,] 60398255260 73203      4     6 0.25          4          0      0    0
+[5,] 60398255260 80333      4     6 3.10          5          0      0    2
+[6,] 60398255260 80334      4     6 6.35          6          0      0    0
+     uncalled_bet_size
+[1,]               0.0
+[2,]               0.0
+[3,]               0.0
+[4,]               0.0
+[5,]               3.1
+[6,]               0.0
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:19 4 0.25 2876150 FALSE TRUE"
+            hand   IDs street seats  bet order_seat order_play button act2
+[1,] 60427209760  7823      3     5 0.00          1          0      0    0
+[2,] 60427209760  9472      3     5 0.00          2          0      0    0
+[3,] 60427209760 19173      3     5 0.10          3          0      0    0
+[4,] 60427209760 80668      3     5 0.35          4          0      0    1
+[5,] 60427209760 82318      3     5 0.25          5          0      0    2
+     uncalled_bet_size
+[1,]              0.00
+[2,]              0.00
+[3,]              0.00
+[4,]              0.00
+[5,]              0.25
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:20 4 0.25 2923631 FALSE TRUE"
+             hand   IDs street seats  bet order_seat order_play button act2
+ [1,] 60440878586  3477      1     9 0.00          1          0      0    1
+ [2,] 60440878586  6672      1     9 0.00          2          0      0    1
+ [3,] 60440878586  7728      1     9 0.00          3          0      0    1
+ [4,] 60440878586  7823      1     9 0.00          4          0      0    1
+ [5,] 60440878586 16114      1     9 0.25          5          0      0    2
+ [6,] 60440878586 18304      1     9 0.00          6          0      0    1
+ [7,] 60440878586 24104      1     9 0.00          7          0      0    1
+ [8,] 60440878586 39413      1     9 0.35          8          0      0    1
+ [9,] 60440878586 77665      1     9 0.10          9          0      0    1
+      uncalled_bet_size
+ [1,]              0.00
+ [2,]              0.00
+ [3,]              0.00
+ [4,]              0.00
+ [5,]              0.25
+ [6,]              0.00
+ [7,]              0.00
+ [8,]              0.00
+ [9,]              0.00
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:21 7 0.25 3028965 FALSE TRUE"
+             hand   IDs street seats  bet order_seat order_play button act2
+ [1,] 60463885398   679      4     9 0.10          1          0      0    0
+ [2,] 60463885398  2930      4     9 0.00          2          0      0    0
+ [3,] 60463885398  7532      4     9 0.00          3          0      0    0
+ [4,] 60463885398 10766      4     9 0.00          4          0      0    0
+ [5,] 60463885398 14317      4     9 0.00          5          0      0    0
+ [6,] 60463885398 43620      4     9 0.35          6          0      0    1
+ [7,] 60463885398 65840      4     9 0.00          7          0      0    0
+ [8,] 60463885398 84949      4     9 0.25          8          0      0    2
+ [9,] 60463885398 85861      4     9 0.00          9          0      0    0
+      uncalled_bet_size
+ [1,]              0.00
+ [2,]              0.00
+ [3,]              0.00
+ [4,]              0.00
+ [5,]              0.00
+ [6,]              0.00
+ [7,]              0.00
+ [8,]              0.25
+ [9,]              0.00
+[1] "1 got order in"
+  game blnd        hand seats st  IDs  chps act  bet haul rank2 rank1 act2
+1    1 0.25 59937793428     3  0 2215 32.15   A 0.25  0.0   170    -1    2
+2    1 0.25 59937793428     3  1 2215 32.15   F 0.25  0.0   170    -1    1
+3    1 0.25 59937793428     3  2 2215 32.15   O 0.25  0.0   170    -1    0
+4    1 0.25 59937793428     3  3 2215 32.15   O 0.25  0.0   170    -1    0
+5    1 0.25 59937793428     3  4 2215 32.15   O 0.25  0.0   170    -1    0
+6    1 0.25 59937793428     3  0 6216 25.90   A 0.00  0.6   170    -1    2
+  order_play seat uncalled_bet_size
+1          0    1                 0
+2          0    1                 0
+3          0    1                 0
+4          0    1                 0
+5          0    1                 0
+6          0    2                 0
+[1] "2 cleaning over"
+      game        blnd           hand               seats           st
+ Min.   :1   Min.   :0.25   Min.   :5.994e+10   Min.   :2.0   Min.   :0
+ 1st Qu.:1   1st Qu.:0.25   1st Qu.:6.010e+10   1st Qu.:6.0   1st Qu.:1
+ Median :1   Median :0.25   Median :6.022e+10   Median :7.0   Median :2
+ Mean   :1   Mean   :0.25   Mean   :6.022e+10   Mean   :7.1   Mean   :2
+ 3rd Qu.:1   3rd Qu.:0.25   3rd Qu.:6.033e+10   3rd Qu.:8.0   3rd Qu.:3
+ Max.   :1   Max.   :0.25   Max.   :6.051e+10   Max.   :9.0   Max.   :4
+      IDs             chps             act             bet
+ Min.   :    1   Min.   :  0.25   Min.   :0.000   Min.   :  0.0000
+ 1st Qu.: 5604   1st Qu.: 10.80   1st Qu.:0.000   1st Qu.:  0.0000
+ Median :15586   Median : 24.00   Median :0.000   Median :  0.0000
+ Mean   :23934   Mean   : 21.62   Mean   :0.808   Mean   :  0.3977
+ 3rd Qu.:37041   3rd Qu.: 27.20   3rd Qu.:2.000   3rd Qu.:  0.2500
+ Max.   :89499   Max.   :240.95   Max.   :2.000   Max.   :210.3500
+      haul              rank2           rank1                act2
+ Min.   :  0.0000   Min.   :  1.0   Min.   :       -1   Min.   :0.0000
+ 1st Qu.:  0.0000   1st Qu.:170.0   1st Qu.:       -1   1st Qu.:0.0000
+ Median :  0.0000   Median :170.0   Median :       -1   Median :0.0000
+ Mean   :  0.4658   Mean   :166.5   Mean   :   277546   Mean   :0.8536
+ 3rd Qu.:  0.0000   3rd Qu.:170.0   3rd Qu.:       -1   3rd Qu.:2.0000
+ Max.   :170.0500   Max.   :170.0   Max.   :400001414   Max.   :3.0000
+   order_play      seat      uncalled_bet_size
+ Min.   :0    Min.   :1.00   Min.   :  0.00000
+ 1st Qu.:0    1st Qu.:2.00   1st Qu.:  0.00000
+ Median :0    Median :4.00   Median :  0.00000
+ Mean   :0    Mean   :4.05   Mean   :  0.04674
+ 3rd Qu.:0    3rd Qu.:6.00   3rd Qu.:  0.00000
+ Max.   :0    Max.   :9.00   Max.   :198.85000
+ num [1:134574300, 1:16] 1 1 1 1 1 1 1 1 1 1 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:16] "game" "blnd" "hand" "seats" ...
+
+       0        1        2        3        4
+26914860 26914860 26914860 26914860 26914860
+
+       2        3        4        5        6        7        8        9
+  621460  1469490  4488180 15867975 31810710 14220220 32773560 33322705
+
+     0.25
+134574300
+[1] "3 error correction starting"
+[1] "4 error correction over"
+
+
+[1] "before/after bins of singalled hand  strength (wagers) over all (old) and by street (new)"
+                                       V1
+1: 7.558579e-04,3.125000e-01,3.368571e+02
+   st                                     V1
+1:  1 1.176471e-03,3.333333e-01,3.368571e+02
+2:  2  0.001511716, 0.294117647,65.300000000
+3:  3 9.891197e-04,2.586207e-01,8.750000e+01
+4:  4 7.558579e-04,2.663551e-01,6.350000e+01
+    st extr1        N
+ 1:  0     2 26914860
+ 2:  1     0 20444533
+ 3:  1     1  3303647
+ 4:  1     2  3166680
+ 5:  2     0 24255208
+ 6:  2     1  1341785
+ 7:  2     2  1317867
+ 8:  3     0 25333800
+ 9:  3     1   791091
+10:  3     2   789969
+11:  4     0 25942165
+12:  4     1   486356
+13:  4     2   486339
+[1] "extrinsic hand strength cut at"
+
+[0.05,0.25]  (0.25,208]
+   12243202     6921852
+
+       0        1        2
+95975706  5922879 32675715
+[1] 0
+[1] 208.1
+[1] 0
+[1] 46.8
+[1] 0
+[1] 8
+[1] 19165054
+[1] "intrinsic strength cut at"
+
+    [2,1.04e+04] (1.04e+04,4e+08]
+         3533954          3503886
+[1] "if bets are a symbol of hand strength, this should be positive because of all ins, but if bets are a description of losses, this
+should be zero, or as close to as possible:"
+            skill_real         skill_real_abs skill_real_uncorrected
+             -509206.7             13961815.9             -5188636.5
+
+[-1.94e+03,-10.5]      (-10.5,0.15]   (0.15,1.18e+03]
+            29857             29809             29833
+[1] "skill cut at 0"
+[1] "# players: 89499"
+[1] "# players with < 100 hands played: 58841"
+[1] "# profitable players: 30457"
+[1] "# profitable players with >= 100 hands: 12756"
+[1] "# unprofitable players with >= 100 hands: 17902"
+
+    0     1     2
+17903 58841 12755
+
+[-1.94e+03,-10.6]         (-10.6,0]
+            29631             29602
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+Warning message:
+no DISPLAY variable so Tk is not available
+  blnd skill n_players AVG(hand_n) MEDIAN(hand_n) MIN(hand_n) MAX(hand_n)
+1 0.25     0     17903   656.49668            240         100       42827
+2 0.25     1     58841    32.50164             25           1          99
+3 0.25     2     12755  1038.74332            286         100       65241
+
+
+
+
+
+##### ##### #####
+##### 1000
+##### ##### #####
+
+./pokerstatedistribution006.r -f /scratch-ssd/f002mmt/PS1000pokerhandrank.csv -o distrPS1000
+...
+Read 7710595 rows and 12 (of 12) columns from 0.363 GB file in 00:00:07
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "The warnings here are because of an Inf that I am catching and controlling for post hoc"
+[1] "0 trying ot get order in"
+[1] "1 got order in"
+  game blnd        hand seats st IDs   chps act bet haul rank2 rank1 act2
+1    1   10 59937796808     6  0   6 270.25   A   0    0   170    -1    2
+2    1   10 59937796808     6  1   6 270.25   F   0    0   170    -1    1
+3    1   10 59937796808     6  2   6 270.25   O   0    0   170    -1    0
+4    1   10 59937796808     6  3   6 270.25   O   0    0   170    -1    0
+5    1   10 59937796808     6  4   6 270.25   O   0    0   170    -1    0
+6    1   10 59937796808     6  0   7 270.00   A   0    0   170    -1    2
+  order_play seat uncalled_bet_size
+1          0    1                 0
+2          0    1                 0
+3          0    1                 0
+4          0    1                 0
+5          0    1                 0
+6          0    2                 0
+[1] "2 cleaning over"
+      game        blnd         hand               seats             st
+ Min.   :1   Min.   :10   Min.   :5.994e+10   Min.   :2.000   Min.   :0
+ 1st Qu.:1   1st Qu.:10   1st Qu.:6.025e+10   1st Qu.:5.000   1st Qu.:1
+ Median :1   Median :10   Median :6.058e+10   Median :6.000   Median :2
+ Mean   :1   Mean   :10   Mean   :6.058e+10   Mean   :5.643   Mean   :2
+ 3rd Qu.:1   3rd Qu.:10   3rd Qu.:6.090e+10   3rd Qu.:6.000   3rd Qu.:3
+ Max.   :1   Max.   :10   Max.   :6.133e+10   Max.   :9.000   Max.   :4
+      IDs              chps             act              bet
+ Min.   :   1.0   Min.   :  10.0   Min.   :0.0000   Min.   :   0.00
+ 1st Qu.: 209.0   1st Qu.: 312.8   1st Qu.:0.0000   1st Qu.:   0.00
+ Median : 491.0   Median :1000.0   Median :0.0000   Median :   5.00
+ Mean   : 890.5   Mean   : 952.6   Mean   :0.7604   Mean   :  21.37
+ 3rd Qu.:1254.0   3rd Qu.:1211.0   3rd Qu.:2.0000   3rd Qu.:  10.00
+ Max.   :4077.0   Max.   :9696.0   Max.   :2.0000   Max.   :8015.75
+      haul            rank2           rank1                act2
+ Min.   :   0.0   Min.   :  1.0   Min.   :       -1   Min.   :0.0000
+ 1st Qu.:   0.0   1st Qu.:170.0   1st Qu.:       -1   1st Qu.:0.0000
+ Median :   0.0   Median :170.0   Median :       -1   Median :0.0000
+ Mean   :  20.9   Mean   :167.5   Mean   :   208105   Mean   :0.8141
+ 3rd Qu.:   0.0   3rd Qu.:170.0   3rd Qu.:       -1   3rd Qu.:2.0000
+ Max.   :5246.0   Max.   :170.0   Max.   :400001414   Max.   :3.0000
+   order_play          seat       uncalled_bet_size
+ Min.   :0.0000   Min.   :1.000   Min.   :   0.000
+ 1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:   0.000
+ Median :0.0000   Median :3.000   Median :   0.000
+ Mean   :0.1695   Mean   :3.321   Mean   :   2.773
+ 3rd Qu.:0.0000   3rd Qu.:5.000   3rd Qu.:   0.000
+ Max.   :2.0000   Max.   :9.000   Max.   :7338.500
+ num [1:7710595, 1:16] 1 1 1 1 1 1 1 1 1 1 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:16] "game" "blnd" "hand" "seats" ...
+
+      0       1       2       3       4
+1542119 1542119 1542119 1542119 1542119
+
+      2       4       5       6       7       8       9
+ 871050  418500 1752750 3225870  208635  589840  643950
+
+     10
+7710595
+[1] "3 error correction starting"
+[1] "4 error correction over"
+[1] "before/after bins of singalled hand  strength (wagers) over all (old) and by street (new)"
+                                       V1
+1: 1.424501e-03,4.166667e-01,4.889000e+02
+   st                                     V1
+1:  1 1.469788e-03,4.691358e-01,4.889000e+02
+2:  2 3.247994e-03,3.333333e-01,1.016500e+02
+3:  3  0.001424501, 0.318181818,24.860714286
+4:  4     0.00185701, 0.32291667,62.95000000
+    st extr1       N
+ 1:  0     1   87105
+ 2:  0     2 1455014
+ 3:  1     0 1124540
+ 4:  1     1  208963
+ 5:  1     2  208616
+ 6:  2     0 1422464
+ 7:  2     1   60842
+ 8:  2     2   58813
+ 9:  3     0 1482289
+10:  3     1   29966
+11:  3     2   29864
+12:  4     0 1506802
+13:  4     1   17660
+14:  4     2   17657
+[1] "extrinsic hand strength cut at"
+
+     [0.6,10] (10,7.93e+03]
+       835992        400705
+
+      0       1       2
+5536095  404536 1769964
+[1] 0
+[1] 7925.75
+[1] 0
+[1] 1612
+[1] 0
+[1] 110
+[1] 1236697
+[1] "intrinsic strength cut at"
+
+    [2,1.06e+04] (1.06e+04,4e+08]
+          166189           160141
+[1] "if bets are a symbol of hand strength, this should be positive because of all ins, but if bets are a description of losses, this
+should be zero, or as close to as possible:"
+            skill_real         skill_real_abs skill_real_uncorrected
+             -11293.17            35572470.38           -17823956.95
+
+[-3.35e+04,-295]       (-295,104]   (104,2.05e+04]
+            1359             1359             1359
+[1] "skill cut at 0"
+[1] "# players: 4077"
+[1] "# players with < 100 hands played: 2607"
+[1] "# profitable players: 1713"
+[1] "# profitable players with >= 100 hands: 739"
+[1] "# unprofitable players with >= 100 hands: 731"
+
+   0    1    2
+ 731 2607  739
+
+[-3.35e+04,-356]         (-356,0]
+            1202             1202
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+Warning message:
+no DISPLAY variable so Tk is not available
+  blnd skill n_players AVG(hand_n) MEDIAN(hand_n) MIN(hand_n) MAX(hand_n)
+1   10     0       731   817.74145            271         100       21796
+2   10     1      2607    32.42885             26           1          99
+3   10     2       739  1163.47497            317         100       16620
+
+
+
+##### ##### #####
+##### 0050
+##### ##### #####
+
+./pokerstatedistribution006.r -f /scratch-ssd/f002mmt/PS0050pokerhandrank.csv -o distrPS0050
+...
+Read 25760300 rows and 12 (of 12) columns from 1.217 GB file in 00:00:17
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "The warnings here are because of an Inf that I am catching and controlling for post hoc"
+[1] "0 trying ot get order in"
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:1 4 0.5 73722 FALSE TRUE"
+            hand   IDs street seats  bet order_seat order_play button act2
+[1,] 60025790962   622      1     5 0.00          1          0      0    1
+[2,] 60025790962  3914      1     5 0.25          2          0      0    1
+[3,] 60025790962 11985      1     5 0.00          3          0      0    1
+[4,] 60025790962 36798      1     5 0.75          4          0      0    1
+[5,] 60025790962 36799      1     5 0.50          5          0      0    2
+     uncalled_bet_size
+[1,]               0.0
+[2,]               0.0
+[3,]               0.0
+[4,]               0.0
+[5,]               0.5
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:2 4 0.5 91504 FALSE TRUE"
+            hand  IDs street seats  bet order_seat order_play button act2
+[1,] 60053887994 2119      1     6 0.00          1          0      0    1
+[2,] 60053887994 3080      1     6 0.00          2          0      0    1
+[3,] 60053887994 6892      1     6 0.25          3          0      0    1
+[4,] 60053887994 7448      1     6 0.75          4          0      0    1
+[5,] 60053887994 7450      1     6 0.50          5          0      0    2
+[6,] 60053887994 7889      1     6 0.00          6          0      0    1
+     uncalled_bet_size
+[1,]               0.0
+[2,]               0.0
+[3,]               0.0
+[4,]               0.0
+[5,]               0.5
+[6,]               0.0
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:3 0 0.5 546414 FALSE TRUE"
+            hand   IDs street seats  bet order_seat order_play button act2
+[1,] 60701377566   537      3     5 0.50          1          0      0    2
+[2,] 60701377566  1003      3     5 0.00          2          0      0    0
+[3,] 60701377566  6924      3     5 0.00          3          0      0    0
+[4,] 60701377566  9618      3     5 0.25          4          0      0    0
+[5,] 60701377566 29840      3     5 0.75          5          0      0    1
+     uncalled_bet_size
+[1,]               0.5
+[2,]               0.0
+[3,]               0.0
+[4,]               0.0
+[5,]               0.0
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:4 5 2 549242 FALSE TRUE"
+            hand   IDs street seats  bet order_seat order_play button act2
+[1,] 60705880028  2794      2     6 2.25          1          0      0    1
+[2,] 60705880028  3250      2     6 0.00          2          0      0    0
+[3,] 60705880028  6924      2     6 0.50          3          0      0    0
+[4,] 60705880028  7123      2     6 0.00          4          0      0    0
+[5,] 60705880028 30458      2     6 0.00          5          0      0    0
+[6,] 60705880028 30877      2     6 2.00          6          0      0    2
+     uncalled_bet_size
+[1,]                 0
+[2,]                 0
+[3,]                 0
+[4,]                 0
+[5,]                 0
+[6,]                 2
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:5 3 0.5 582289 FALSE TRUE"
+             hand   IDs street seats  bet order_seat order_play button act2
+ [1,] 60746407196   369      4     9 0.00          1          0      0    0
+ [2,] 60746407196  6412      4     9 0.25          2          0      0    0
+ [3,] 60746407196 11846      4     9 0.75          3          0      0    1
+ [4,] 60746407196 12744      4     9 0.50          4          0      0    2
+ [5,] 60746407196 13372      4     9 0.00          5          0      0    0
+ [6,] 60746407196 14626      4     9 0.00          6          0      0    0
+ [7,] 60746407196 27051      4     9 0.00          7          0      0    0
+ [8,] 60746407196 32083      4     9 0.00          8          0      0    0
+ [9,] 60746407196 32098      4     9 0.00          9          0      0    0
+      uncalled_bet_size
+ [1,]               0.0
+ [2,]               0.0
+ [3,]               0.0
+ [4,]               0.5
+ [5,]               0.0
+ [6,]               0.0
+ [7,]               0.0
+ [8,]               0.0
+ [9,]               0.0
+[1] "1 got order in"
+  game blnd        hand seats st   IDs   chps act  bet haul rank2 rank1 act2
+1    1  0.5 59937793578     6  0 11366 187.45   A 0.00    0   170    -1    2
+2    1  0.5 59937793578     6  1 11366 187.45   F 0.00    0   170    -1    1
+3    1  0.5 59937793578     6  2 11366 187.45   O 0.00    0   170    -1    0
+4    1  0.5 59937793578     6  3 11366 187.45   O 0.00    0   170    -1    0
+5    1  0.5 59937793578     6  4 11366 187.45   O 0.00    0   170    -1    0
+6    1  0.5 59937793578     6  0 14823  40.90   A 0.25    0   170    -1    2
+  order_play seat uncalled_bet_size
+1          0    1                 0
+2          0    1                 0
+3          0    1                 0
+4          0    1                 0
+5          0    1                 0
+6          0    2                 0
+[1] "2 cleaning over"
+      game        blnd          hand               seats             st
+ Min.   :1   Min.   :0.5   Min.   :5.994e+10   Min.   :2.000   Min.   :0
+ 1st Qu.:1   1st Qu.:0.5   1st Qu.:6.029e+10   1st Qu.:4.000   1st Qu.:1
+ Median :1   Median :0.5   Median :6.065e+10   Median :6.000   Median :2
+ Mean   :1   Mean   :0.5   Mean   :6.065e+10   Mean   :5.672   Mean   :2
+ 3rd Qu.:1   3rd Qu.:0.5   3rd Qu.:6.101e+10   3rd Qu.:8.000   3rd Qu.:3
+ Max.   :1   Max.   :0.5   Max.   :6.137e+10   Max.   :9.000   Max.   :4
+      IDs             chps             act              bet
+ Min.   :    1   Min.   :  0.50   Min.   :0.0000   Min.   :  0.000
+ 1st Qu.: 2588   1st Qu.: 23.25   1st Qu.:0.0000   1st Qu.:  0.000
+ Median : 8238   Median : 50.00   Median :1.0000   Median :  0.250
+ Mean   :11545   Mean   : 47.99   Mean   :0.8659   Mean   :  1.061
+ 3rd Qu.:18317   3rd Qu.: 59.05   3rd Qu.:2.0000   3rd Qu.:  0.500
+ Max.   :38878   Max.   :702.00   Max.   :2.0000   Max.   :588.550
+      haul             rank2           rank1                act2
+ Min.   :  0.000   Min.   :  1.0   Min.   :       -1   Min.   :0.0000
+ 1st Qu.:  0.000   1st Qu.:170.0   1st Qu.:       -1   1st Qu.:0.0000
+ Median :  0.000   Median :170.0   Median :       -1   Median :1.0000
+ Mean   :  1.191   Mean   :165.3   Mean   :   291681   Mean   :0.9302
+ 3rd Qu.:  0.000   3rd Qu.:170.0   3rd Qu.:       -1   3rd Qu.:2.0000
+ Max.   :345.500   Max.   :170.0   Max.   :400001414   Max.   :3.0000
+   order_play         seat       uncalled_bet_size
+ Min.   :0.000   Min.   :1.000   Min.   :  0.0000
+ 1st Qu.:0.000   1st Qu.:2.000   1st Qu.:  0.0000
+ Median :0.000   Median :3.000   Median :  0.0000
+ Mean   :0.356   Mean   :3.336   Mean   :  0.1396
+ 3rd Qu.:0.000   3rd Qu.:5.000   3rd Qu.:  0.0000
+ Max.   :2.000   Max.   :9.000   Max.   :561.3000
+ num [1:25760300, 1:16] 1 1 1 1 1 1 1 1 1 1 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:16] "game" "blnd" "hand" "seats" ...
+
+      0       1       2       3       4
+5152060 5152060 5152060 5152060 5152060
+
+      2       3       4       5       6       7       8       9
+6113860     105  524840 3131075 7297140 1183840 3513440 3996000
+
+     0.5
+25760300
+[1] "3 error correction starting"
+[1] "4 error correction over"
+[1] "before/after bins of singalled hand  strength (wagers) over all (old) and by street (new)"
+                                       V1
+1: 8.532423e-04,4.000000e-01,5.419333e+02
+   st                                     V1
+1:  1 1.912412e-03,4.285714e-01,5.419333e+02
+2:  2   0.00120919,  0.36363636,150.30000000
+3:  3  0.001029866, 0.326530612,63.650000000
+4:  4 8.532423e-04,3.333333e-01,3.386000e+02
+    st extr1       N
+ 1:  0     1  611386
+ 2:  0     2 4540674
+ 3:  1     0 3556965
+ 4:  1     1  801433
+ 5:  1     2  793662
+ 6:  2     0 4528303
+ 7:  2     1  313008
+ 8:  2     2  310749
+ 9:  3     0 4776074
+10:  3     1  188134
+11:  3     2  187852
+12:  4     0 4903278
+13:  4     1  127874
+14:  4     2  120908
+[1] "extrinsic hand strength cut at"
+
+[0.05,0.5]  (0.5,583]
+   3528418    1728434
+
+       0        1        2
+17764620  2041835  5953845
+[1] 0
+[1] 583.05
+[1] 0
+[1] 108.55
+[1] 0
+[1] 25.75
+[1] 5256852
+[1] "intrinsic strength cut at"
+
+    [2,1.03e+04] (1.03e+04,4e+08]
+          839340           819545
+[1] "if bets are a symbol of hand strength, this should be positive because of all ins, but if bets are a description of losses, this
+should be zero, or as close to as possible:"
+            skill_real         skill_real_abs skill_real_uncorrected
+             -210132.1              6588664.2             -2861664.4
+
+[-1.34e+03,-13.6]       (-13.6,3.1]         (3.1,659]
+            12972             12947             12959
+[1] "skill cut at 0"
+[1] "# players: 38878"
+[1] "# players with < 100 hands played: 28925"
+[1] "# profitable players: 15819"
+[1] "# profitable players with >= 100 hands: 4730"
+[1] "# unprofitable players with >= 100 hands: 5223"
+
+    0     1     2
+ 5223 28925  4730
+
+[-1.34e+03,-16]         (-16,0]
+          11743           11723
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+Warning message:
+no DISPLAY variable so Tk is not available
+  blnd skill n_players AVG(hand_n) MEDIAN(hand_n) MIN(hand_n) MAX(hand_n)
+1  0.5     0      5223   403.01704          207.0         100       10620
+2  0.5     1     28925    31.64041           24.0           1          99
+3  0.5     2      4730   450.71945          214.5         100       16564
+
+
+
+##### ##### #####
+##### 0100
+##### ##### #####
+
+./pokerstatedistribution006.r -f /scratch-ssd/f002mmt/PS0100pokerhandrank.csv -o distrPS0100
+...
+Read 31984870 rows and 12 (of 12) columns from 1.506 GB file in 00:00:19
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "The warnings here are because of an Inf that I am catching and controlling for post hoc"
+[1] "0 trying ot get order in"
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:1 3 1 250100 FALSE TRUE"
+            hand   IDs street seats bet order_seat order_play button act2
+[1,] 60233267820   186      1     8 0.0          1          0      0    1
+[2,] 60233267820   377      1     8 0.0          2          0      0    1
+[3,] 60233267820  1692      1     8 0.0          3          0      0    1
+[4,] 60233267820  5998      1     8 1.0          4          0      0    2
+[5,] 60233267820  6485      1     8 1.5          5          0      0    1
+[6,] 60233267820  7009      1     8 0.5          6          0      0    1
+[7,] 60233267820 13378      1     8 0.0          7          0      0    1
+[8,] 60233267820 19764      1     8 0.0          8          0      0    1
+     uncalled_bet_size
+[1,]                 0
+[2,]                 0
+[3,]                 0
+[4,]                 1
+[5,]                 0
+[6,]                 0
+[7,]                 0
+[8,]                 0
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:2 2 1 434448 FALSE TRUE"
+            hand   IDs street seats bet order_seat order_play button act2
+[1,] 60461487282  3409      1     6 1.5          1          0      0    1
+[2,] 60461487282  5584      1     6 0.0          2          0      0    1
+[3,] 60461487282 15768      1     6 1.0          3          0      0    2
+[4,] 60461487282 18000      1     6 0.0          4          0      0    1
+[5,] 60461487282 22235      1     6 0.0          5          0      0    1
+[6,] 60461487282 24292      1     6 0.5          6          0      0    1
+     uncalled_bet_size
+[1,]                 0
+[2,]                 0
+[3,]                 1
+[4,]                 0
+[5,]                 0
+[6,]                 0
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:3 8 9 948601 FALSE TRUE"
+             hand  IDs street seats bet order_seat order_play button act2
+ [1,] 61141401174  281      4     9 1.0          1          0      0    0
+ [2,] 61141401174  531      4     9 0.0          2          0      0    0
+ [3,] 61141401174 1257      4     9 0.0          3          0      0    0
+ [4,] 61141401174 3043      4     9 0.0          4          0      0    0
+ [5,] 61141401174 3457      4     9 0.5          5          0      0    0
+ [6,] 61141401174 4972      4     9 9.5          6          0      0    1
+ [7,] 61141401174 5253      4     9 0.0          7          0      0    0
+ [8,] 61141401174 6884      4     9 0.0          8          0      0    0
+ [9,] 61141401174 6936      4     9 9.0          9          0      0    2
+      uncalled_bet_size
+ [1,]                 0
+ [2,]                 0
+ [3,]                 0
+ [4,]                 0
+ [5,]                 0
+ [6,]                 0
+ [7,]                 0
+ [8,]                 0
+ [9,]                 9
+[1] "1 got order in"
+  game blnd        hand seats st  IDs   chps act bet haul rank2 rank1 act2
+1    1    1 59937793692     6  0 4836 100.00   A   0    0   170    -1    2
+2    1    1 59937793692     6  1 4836 100.00   F   0    0   170    -1    1
+3    1    1 59937793692     6  2 4836 100.00   O   0    0   170    -1    0
+4    1    1 59937793692     6  3 4836 100.00   O   0    0   170    -1    0
+5    1    1 59937793692     6  4 4836 100.00   O   0    0   170    -1    0
+6    1    1 59937793692     6  0 9763 108.25   A   0    0   170    -1    2
+  order_play seat uncalled_bet_size
+1          0    1                 0
+2          0    1                 0
+3          0    1                 0
+4          0    1                 0
+5          0    1                 0
+6          0    2                 0
+[1] "2 cleaning over"
+      game        blnd        hand               seats             st
+ Min.   :1   Min.   :1   Min.   :5.994e+10   Min.   :2.000   Min.   :0
+ 1st Qu.:1   1st Qu.:1   1st Qu.:6.028e+10   1st Qu.:5.000   1st Qu.:1
+ Median :1   Median :1   Median :6.063e+10   Median :6.000   Median :2
+ Mean   :1   Mean   :1   Mean   :6.064e+10   Mean   :5.958   Mean   :2
+ 3rd Qu.:1   3rd Qu.:1   3rd Qu.:6.100e+10   3rd Qu.:8.000   3rd Qu.:3
+ Max.   :1   Max.   :1   Max.   :6.137e+10   Max.   :9.000   Max.   :4
+      IDs             chps             act              bet
+ Min.   :    1   Min.   :   1.0   Min.   :0.0000   Min.   :   0.000
+ 1st Qu.: 1278   1st Qu.:  53.4   1st Qu.:0.0000   1st Qu.:   0.000
+ Median : 4700   Median : 100.0   Median :0.0000   Median :   0.500
+ Mean   : 8650   Mean   : 102.2   Mean   :0.8092   Mean   :   1.998
+ 3rd Qu.:14397   3rd Qu.: 122.7   3rd Qu.:2.0000   3rd Qu.:   1.000
+ Max.   :35417   Max.   :1269.5   Max.   :2.0000   Max.   :1126.550
+      haul           rank2           rank1                act2
+ Min.   :  0.0   Min.   :  1.0   Min.   :       -1   Min.   :0.0000
+ 1st Qu.:  0.0   1st Qu.:170.0   1st Qu.:       -1   1st Qu.:0.0000
+ Median :  0.0   Median :170.0   Median :       -1   Median :0.0000
+ Mean   :  2.2   Mean   :166.7   Mean   :   236768   Mean   :0.8652
+ 3rd Qu.:  0.0   3rd Qu.:170.0   3rd Qu.:       -1   3rd Qu.:2.0000
+ Max.   :864.9   Max.   :170.0   Max.   :400001414   Max.   :3.0000
+   order_play         seat       uncalled_bet_size
+ Min.   :0.000   Min.   :1.000   Min.   :   0.0000
+ 1st Qu.:0.000   1st Qu.:2.000   1st Qu.:   0.0000
+ Median :0.000   Median :3.000   Median :   0.0000
+ Mean   :0.213   Mean   :3.479   Mean   :   0.2599
+ 3rd Qu.:0.000   3rd Qu.:5.000   3rd Qu.:   0.0000
+ Max.   :2.000   Max.   :9.000   Max.   :1126.5500
+ num [1:31984870, 1:16] 1 1 1 1 1 1 1 1 1 1 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:16] "game" "blnd" "hand" "seats" ...
+
+      0       1       2       3       4
+6396974 6396974 6396974 6396974 6396974
+
+       2        3        4        5        6        7        8        9
+ 4542460      285   824040  4893150 11617770  1426810  4108760  4571595
+
+       1
+31984870
+[1] "3 error correction starting"
+[1] "4 error correction over"
+[1] "before/after bins of singalled hand  strength (wagers) over all (old) and by street (new)"
+                                       V1
+1: 3.735525e-04,4.000000e-01,6.846333e+02
+   st                                     V1
+1:  1 1.914242e-03,4.342343e-01,6.846333e+02
+2:  2 1.039501e-03,3.333333e-01,1.863417e+02
+3:  3 4.014452e-04,3.076923e-01,1.885750e+02
+4:  4 3.735525e-04,3.111111e-01,1.964250e+02
+    st extr1       N
+ 1:  0     1  454246
+ 2:  0     2 5942728
+ 3:  1     0 4633298
+ 4:  1     1  881838
+ 5:  1     2  881838
+ 6:  2     0 5763016
+ 7:  2     1  318472
+ 8:  2     2  315486
+ 9:  3     0 6040225
+10:  3     1  183497
+11:  3     2  173252
+12:  4     0 6178326
+13:  4     1  109396
+14:  4     2  109252
+[1] "extrinsic hand strength cut at"
+
+   [0.05,1] (1,1.1e+03]
+    3646789     1883816
+
+       0        1        2
+22614865  1947449  7422556
+[1] 0
+[1] 1101.75
+[1] 0
+[1] 188.65
+[1] 0
+[1] 30
+[1] 5530605
+[1] "intrinsic strength cut at"
+
+    [2,1.04e+04] (1.04e+04,4e+08]
+          786899           784091
+[1] "if bets are a symbol of hand strength, this should be positive because of all ins, but if bets are a description of losses, this
+should be zero, or as close to as possible:"
+            skill_real         skill_real_abs skill_real_uncorrected
+               -330830               15311737               -6599848
+
+[-8.55e+03,-27.2]       (-27.2,6.5]    (6.5,2.25e+03]
+            11808             11809             11800
+[1] "skill cut at 0"
+[1] "# players: 35417"
+[1] "# players with < 100 hands played: 26096"
+[1] "# profitable players: 14452"
+[1] "# profitable players with >= 100 hands: 4571"
+[1] "# unprofitable players with >= 100 hands: 4750"
+
+    0     1     2
+ 4750 26096  4571
+
+[-8.55e+03,-31.9]         (-31.9,0]
+            10663             10656
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+Warning message:
+no DISPLAY variable so Tk is not available
+  blnd skill n_players AVG(hand_n) MEDIAN(hand_n) MIN(hand_n) MAX(hand_n)
+1    1     0      4750   562.19179            209         100       48122
+2    1     1     26096    31.18693             24           1          99
+3    1     2      4571   637.21483            237         100       18082
+
+
+
+##### ##### #####
+##### 0200
+##### ##### #####
+
+./pokerstatedistribution006.r -f /scratch-ssd/f002mmt/PS0200pokerhandrank.csv -o distrPS0200
+...
+Read 30602705 rows and 12 (of 12) columns from 1.421 GB file in 00:00:18
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "The warnings here are because of an Inf that I am catching and controlling for post hoc"
+[1] "0 trying ot get order in"
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:1 0 2 226754 FALSE TRUE"
+            hand   IDs street seats bet order_seat order_play button act2
+[1,] 60251066206   122      1     6   2          1          0      0    2
+[2,] 60251066206   740      1     6   3          2          0      0    1
+[3,] 60251066206   936      1     6   0          3          0      0    1
+[4,] 60251066206  1885      1     6   0          4          0      0    1
+[5,] 60251066206  2315      1     6   0          5          0      0    1
+[6,] 60251066206 11330      1     6   1          6          0      0    1
+     uncalled_bet_size
+[1,]                 2
+[2,]                 0
+[3,]                 0
+[4,]                 0
+[5,]                 0
+[6,]                 0
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:2 1 2 940637 FALSE TRUE"
+            hand  IDs street seats bet order_seat order_play button act2
+[1,] 61265797792   22      2     6   1          1          0      0    0
+[2,] 61265797792  513      2     6   2          2          0      0    2
+[3,] 61265797792 3153      2     6   3          3          0      0    1
+[4,] 61265797792 3347      2     6   0          4          0      0    0
+[5,] 61265797792 3519      2     6   0          5          0      0    0
+[6,] 61265797792 5307      2     6   0          6          0      0    0
+     uncalled_bet_size
+[1,]                 0
+[2,]                 2
+[3,]                 0
+[4,]                 0
+[5,]                 0
+[6,]                 0
+[1] "1 got order in"
+  game blnd        hand seats st  IDs  chps act bet haul rank2 rank1 act2
+1    1    2 59937793454     6  0    6 294.7   A   0    0   170    -1    2
+2    1    2 59937793454     6  1    6 294.7   F   0    0   170    -1    1
+3    1    2 59937793454     6  2    6 294.7   O   0    0   170    -1    0
+4    1    2 59937793454     6  3    6 294.7   O   0    0   170    -1    0
+5    1    2 59937793454     6  4    6 294.7   O   0    0   170    -1    0
+6    1    2 59937793454     6  0 1541 318.7   A   0    5   170    -1    2
+  order_play seat uncalled_bet_size
+1          0    1                 0
+2          0    1                 0
+3          0    1                 0
+4          0    1                 0
+5          0    1                 0
+6          0    2                 0
+[1] "2 cleaning over"
+      game        blnd        hand               seats             st
+ Min.   :1   Min.   :2   Min.   :5.994e+10   Min.   :2.000   Min.   :0
+ 1st Qu.:1   1st Qu.:2   1st Qu.:6.029e+10   1st Qu.:5.000   1st Qu.:1
+ Median :1   Median :2   Median :6.064e+10   Median :6.000   Median :2
+ Mean   :1   Mean   :2   Mean   :6.064e+10   Mean   :6.193   Mean   :2
+ 3rd Qu.:1   3rd Qu.:2   3rd Qu.:6.100e+10   3rd Qu.:8.000   3rd Qu.:3
+ Max.   :1   Max.   :2   Max.   :6.137e+10   Max.   :9.000   Max.   :4
+      IDs             chps              act              bet
+ Min.   :    1   Min.   :   2.00   Min.   :0.0000   Min.   :   0.000
+ 1st Qu.:  800   1st Qu.:  65.25   1st Qu.:0.0000   1st Qu.:   0.000
+ Median : 3000   Median : 200.00   Median :0.0000   Median :   1.000
+ Mean   : 5562   Mean   : 180.56   Mean   :0.7835   Mean   :   3.795
+ 3rd Qu.: 8223   3rd Qu.: 230.25   3rd Qu.:2.0000   3rd Qu.:   2.000
+ Max.   :24426   Max.   :2092.65   Max.   :2.0000   Max.   :1948.500
+      haul             rank2           rank1                act2
+ Min.   :   0.00   Min.   :  1.0   Min.   :       -1   Min.   :0.0000
+ 1st Qu.:   0.00   1st Qu.:170.0   1st Qu.:       -1   1st Qu.:0.0000
+ Median :   0.00   Median :170.0   Median :       -1   Median :0.0000
+ Mean   :   4.01   Mean   :167.1   Mean   :   226975   Mean   :0.8363
+ 3rd Qu.:   0.00   3rd Qu.:170.0   3rd Qu.:       -1   3rd Qu.:2.0000
+ Max.   :1340.50   Max.   :170.0   Max.   :400001414   Max.   :3.0000
+   order_play          seat       uncalled_bet_size
+ Min.   :0.0000   Min.   :1.000   Min.   :   0.0000
+ 1st Qu.:0.0000   1st Qu.:2.000   1st Qu.:   0.0000
+ Median :0.0000   Median :3.000   Median :   0.0000
+ Mean   :0.1654   Mean   :3.596   Mean   :   0.4878
+ 3rd Qu.:0.0000   3rd Qu.:5.000   3rd Qu.:   0.0000
+ Max.   :2.0000   Max.   :9.000   Max.   :1817.5000
+ num [1:30602705, 1:16] 1 1 1 1 1 1 1 1 1 1 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:16] "game" "blnd" "hand" "seats" ...
+
+      0       1       2       3       4
+6120541 6120541 6120541 6120541 6120541
+
+       2        3        4        5        6        7        8        9
+ 3374320       30   873100  4722425 10375650  1624700  4653320  4979160
+
+       2
+30602705
+[1] "3 error correction starting"
+[1] "4 error correction over"
+[1] "before/after bins of singalled hand  strength (wagers) over all (old) and by street (new)"
+                                       V1
+1: 3.423485e-04,4.000000e-01,5.103500e+02
+   st                                     V1
+1:  1 1.498689e-03,4.347826e-01,5.103500e+02
+2:  2 3.423485e-04,3.333333e-01,1.287750e+02
+3:  3 8.244023e-04,3.026316e-01,6.513333e+01
+4:  4 4.759638e-04,3.057063e-01,9.505000e+01
+    st extr1       N
+ 1:  0     1  337432
+ 2:  0     2 5783109
+ 3:  1     0 4503236
+ 4:  1     1  818041
+ 5:  1     2  799264
+ 6:  2     0 5565902
+ 7:  2     1  287884
+ 8:  2     2  266755
+ 9:  3     0 5831554
+10:  3     1  144515
+11:  3     2  144472
+12:  4     0 5945797
+13:  4     1   87372
+14:  4     2   87372
+[1] "extrinsic hand strength cut at"
+
+    [0.05,2] (2,1.93e+03]
+     3227894      1654647
+
+       0        1        2
+21846489  1675244  7080972
+[1] 0
+[1] 1928.5
+[1] 0
+[1] 525
+[1] 0
+[1] 45
+[1] 4882541
+[1] "intrinsic strength cut at"
+
+    [2,1.05e+04] (1.05e+04,4e+08]
+          688420           680370
+[1] "if bets are a symbol of hand strength, this should be positive because of all ins, but if bets are a description of losses, this
+should be zero, or as close to as possible:"
+            skill_real         skill_real_abs skill_real_uncorrected
+               -380232               26970588              -12037041
+
+[-6.97e+03,-57.5]      (-57.5,14.2]    (14.2,8.1e+03]
+             8142              8142              8142
+[1] "skill cut at 0"
+[1] "# players: 24426"
+[1] "# players with < 100 hands played: 16912"
+[1] "# profitable players: 10009"
+[1] "# profitable players with >= 100 hands: 3706"
+[1] "# unprofitable players with >= 100 hands: 3808"
+
+    0     1     2
+ 3808 16912  3706
+
+[-6.97e+03,-68.5]         (-68.5,0]
+             7319              7319
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+Warning message:
+no DISPLAY variable so Tk is not available
+  blnd skill n_players AVG(hand_n) MEDIAN(hand_n) MIN(hand_n) MAX(hand_n)
+1    2     0      3808   616.85688          217.5         100       34297
+2    2     1     16912    32.78979           26.0           1          99
+3    2     2      3706   868.05424          233.0         100       48721
+
+
+
+##### ##### #####
+##### 0400
+##### ##### #####
+
+./pokerstatedistribution006.r -f /scratch-ssd/f002mmt/PS0400pokerhandrank.csv -o distrPS0400
+...
+Read 22521470 rows and 12 (of 12) columns from 1.042 GB file in 00:00:13
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "The warnings here are because of an Inf that I am catching and controlling for post hoc"
+[1] "0 trying ot get order in"
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:1 5 16 282803 FALSE TRUE"
+            hand  IDs street seats bet order_seat order_play button act2
+[1,] 60468465462  188      2     6   0          1          0      0    0
+[2,] 60468465462  251      2     6   0          2          0      0    0
+[3,] 60468465462  747      2     6   4          3          0      0    0
+[4,] 60468465462 1682      2     6   2          4          0      0    0
+[5,] 60468465462 5318      2     6  18          5          0      0    1
+[6,] 60468465462 6339      2     6  16          6          0      0    2
+     uncalled_bet_size
+[1,]                 0
+[2,]                 0
+[3,]                 0
+[4,]                 0
+[5,]                 0
+[6,]                16
+[1] "PROBLEM OIDHGLL: bet was negative (bet wasn't largest bet). problem count:2 2 4 652216 FALSE TRUE"
+            hand   IDs street seats bet order_seat order_play button act2
+[1,] 61211686380   757      2     5   0          1          0      0    0
+[2,] 61211686380  2224      2     5   2          2          0      0    0
+[3,] 61211686380  3843      2     5   4          3          0      0    2
+[4,] 61211686380 13232      2     5   0          4          0      0    0
+[5,] 61211686380 13267      2     5   6          5          0      0    1
+     uncalled_bet_size
+[1,]                 0
+[2,]                 0
+[3,]                 4
+[4,]                 0
+[5,]                 0
+[1] "1 got order in"
+  game blnd        hand seats st IDs chps act bet haul rank2 rank1 act2
+1    1    4 59937794456     8  0 238 81.5   A   0    0   170    -1    2
+2    1    4 59937794456     8  1 238 81.5   F   0    0   170    -1    1
+3    1    4 59937794456     8  2 238 81.5   O   0    0   170    -1    0
+4    1    4 59937794456     8  3 238 81.5   O   0    0   170    -1    0
+5    1    4 59937794456     8  4 238 81.5   O   0    0   170    -1    0
+6    1    4 59937794456     8  0 311 87.0   A   0    0   170    -1    2
+  order_play seat uncalled_bet_size
+1          0    1                 0
+2          0    1                 0
+3          0    1                 0
+4          0    1                 0
+5          0    1                 0
+6          0    2                 0
+[1] "2 cleaning over"
+      game        blnd        hand               seats             st
+ Min.   :1   Min.   :4   Min.   :5.994e+10   Min.   :2.000   Min.   :0
+ 1st Qu.:1   1st Qu.:4   1st Qu.:6.027e+10   1st Qu.:5.000   1st Qu.:1
+ Median :1   Median :4   Median :6.061e+10   Median :6.000   Median :2
+ Mean   :1   Mean   :4   Mean   :6.063e+10   Mean   :5.996   Mean   :2
+ 3rd Qu.:1   3rd Qu.:4   3rd Qu.:6.099e+10   3rd Qu.:6.000   3rd Qu.:3
+ Max.   :1   Max.   :4   Max.   :6.137e+10   Max.   :9.000   Max.   :4
+      IDs             chps             act             bet
+ Min.   :    1   Min.   :   4.0   Min.   :0.000   Min.   :   0.000
+ 1st Qu.:  560   1st Qu.: 116.1   1st Qu.:0.000   1st Qu.:   0.000
+ Median : 1985   Median : 393.5   Median :0.000   Median :   0.000
+ Mean   : 3522   Mean   : 345.9   Mean   :0.766   Mean   :   7.541
+ 3rd Qu.: 5622   3rd Qu.: 452.0   3rd Qu.:2.000   3rd Qu.:   4.000
+ Max.   :14433   Max.   :5773.1   Max.   :2.000   Max.   :4894.600
+      haul              rank2           rank1                act2
+ Min.   :   0.000   Min.   :  1.0   Min.   :       -1   Min.   :0.000
+ 1st Qu.:   0.000   1st Qu.:170.0   1st Qu.:       -1   1st Qu.:0.000
+ Median :   0.000   Median :170.0   Median :       -1   Median :0.000
+ Mean   :   7.695   Mean   :167.4   Mean   :   223751   Mean   :0.817
+ 3rd Qu.:   0.000   3rd Qu.:170.0   3rd Qu.:       -1   3rd Qu.:2.000
+ Max.   :3181.500   Max.   :170.0   Max.   :400001414   Max.   :3.000
+   order_play           seat       uncalled_bet_size
+ Min.   :0.00000   Min.   :1.000   Min.   :   0.000
+ 1st Qu.:0.00000   1st Qu.:2.000   1st Qu.:   0.000
+ Median :0.00000   Median :3.000   Median :   0.000
+ Mean   :0.09382   Mean   :3.498   Mean   :   0.934
+ 3rd Qu.:0.00000   3rd Qu.:5.000   3rd Qu.:   0.000
+ Max.   :2.00000   Max.   :9.000   Max.   :3929.750
+ num [1:22521470, 1:16] 1 1 1 1 1 1 1 1 1 1 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:16] "game" "blnd" "hand" "seats" ...
+
+      0       1       2       3       4
+4504294 4504294 4504294 4504294 4504294
+
+      2       3       4       5       6       7       8       9
+1408580     105 1006100 4964800 9800130  704550 2103480 2533725
+
+       4
+22521470
+[1] "3 error correction starting"
+[1] "4 error correction over"
+[1] "before/after bins of singalled hand  strength (wagers) over all (old) and by street (new)"
+                                       V1
+1: 2.449780e-04,3.888889e-01,8.154333e+02
+   st                                     V1
+1:  1 1.582278e-03,4.285714e-01,8.154333e+02
+2:  2    9.29368e-04,3.12500e-01,1.31350e+02
+3:  3 4.096682e-04,2.941176e-01,7.075000e+01
+4:  4 2.449780e-04,2.933333e-01,1.235938e+02
+    st extr1       N
+ 1:  0     1  140858
+ 2:  0     2 4363436
+ 3:  1     0 3343165
+ 4:  1     1  587887
+ 5:  1     2  573242
+ 6:  2     0 4130212
+ 7:  2     1  188156
+ 8:  2     2  185926
+ 9:  3     0 4313764
+10:  3     1   96473
+11:  3     2   94057
+12:  4     0 4391977
+13:  4     1   56199
+14:  4     2   56118
+[1] "extrinsic hand strength cut at"
+
+    [0.05,4] (4,4.89e+03]
+     2238999      1157316
+
+       0        1        2
+16179118  1069573  5272779
+[1] 0
+[1] 4892.6
+[1] 0
+[1] 840.2
+[1] 0
+[1] 116
+[1] 3396315
+[1] "intrinsic strength cut at"
+
+    [2,1.06e+04] (1.06e+04,4e+08]
+          499511           481569
+[1] "if bets are a symbol of hand strength, this should be positive because of all ins, but if bets are a description of losses, this
+should be zero, or as close to as possible:"
+            skill_real         skill_real_abs skill_real_uncorrected
+             -394579.8             38442114.8            -17430109.8
+
+[-1.58e+04,-123]      (-123,27.2]  (27.2,1.29e+04]
+            4811             4811             4811
+[1] "skill cut at 0"
+[1] "# players: 14433"
+[1] "# players with < 100 hands played: 9680"
+[1] "# profitable players: 5805"
+[1] "# profitable players with >= 100 hands: 2326"
+[1] "# unprofitable players with >= 100 hands: 2427"
+
+   0    1    2
+2427 9680 2326
+
+[-1.58e+04,-140]         (-140,0]
+            4386             4363
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+Warning message:
+no DISPLAY variable so Tk is not available
+  blnd skill n_players AVG(hand_n) MEDIAN(hand_n) MIN(hand_n) MAX(hand_n)
+1    4     0      2427   721.42357            234         100       26622
+2    4     1      9680    33.09339             26           1          99
+3    4     2      2326  1046.02537            264         100       55784
+
+
+
+##### ##### #####
+##### 0600
+##### ##### #####
+
+./pokerstatedistribution006.r -f /scratch-ssd/f002mmt/PS0600pokerhandrank.csv -o distrPS0600
+...
+Read 9310075 rows and 12 (of 12) columns from 0.430 GB file in 00:00:06
+There were 50 or more warnings (use warnings() to see the first 50)
+[1] "The warnings here are because of an Inf that I am catching and controlling for post hoc"
+[1] "0 trying ot get order in"
+[1] "1 got order in"
+  game blnd        hand seats st  IDs   chps act bet  haul rank2 rank1 act2
+1    1    6 59937795326     4  0  314 719.05   A   0 29.45   170    -1    2
+2    1    6 59937795326     4  1  314 719.05   R  14 29.45   170    -1    3
+3    1    6 59937795326     4  2  314 719.05   B  29 29.45   170    -1    3
+4    1    6 59937795326     4  3  314 719.05   O  29 29.45   170    -1    0
+5    1    6 59937795326     4  4  314 719.05   O  29 29.45   170    -1    0
+6    1    6 59937795326     4  0 3096 134.75   A   6  0.00   170    -1    2
+  order_play seat uncalled_bet_size
+1          0    1                 0
+2          0    1                 0
+3          0    1                29
+4          0    1                 0
+5          0    1                 0
+6          0    2                 0
+[1] "2 cleaning over"
+      game        blnd        hand               seats             st
+ Min.   :1   Min.   :6   Min.   :5.994e+10   Min.   :2.000   Min.   :0
+ 1st Qu.:1   1st Qu.:6   1st Qu.:6.026e+10   1st Qu.:5.000   1st Qu.:1
+ Median :1   Median :6   Median :6.058e+10   Median :6.000   Median :2
+ Mean   :1   Mean   :6   Mean   :6.059e+10   Mean   :6.389   Mean   :2
+ 3rd Qu.:1   3rd Qu.:6   3rd Qu.:6.094e+10   3rd Qu.:8.000   3rd Qu.:3
+ Max.   :1   Max.   :6   Max.   :6.136e+10   Max.   :9.000   Max.   :4
+      IDs            chps             act              bet
+ Min.   :   1   Min.   :   6.0   Min.   :0.0000   Min.   :   0.00
+ 1st Qu.: 321   1st Qu.: 204.3   1st Qu.:0.0000   1st Qu.:   0.00
+ Median : 735   Median : 600.0   Median :0.0000   Median :   0.00
+ Mean   :1539   Mean   : 555.5   Mean   :0.7568   Mean   :  10.97
+ 3rd Qu.:2271   3rd Qu.: 705.0   3rd Qu.:2.0000   3rd Qu.:   6.00
+ Max.   :7166   Max.   :5654.5   Max.   :2.0000   Max.   :4948.75
+      haul             rank2           rank1                act2
+ Min.   :   0.00   Min.   :  1.0   Min.   :       -1   Min.   :0.0000
+ 1st Qu.:   0.00   1st Qu.:170.0   1st Qu.:       -1   1st Qu.:0.0000
+ Median :   0.00   Median :170.0   Median :       -1   Median :0.0000
+ Mean   :  11.31   Mean   :167.6   Mean   :   208030   Mean   :0.8057
+ 3rd Qu.:   0.00   3rd Qu.:170.0   3rd Qu.:       -1   3rd Qu.:2.0000
+ Max.   :3713.20   Max.   :170.0   Max.   :400001414   Max.   :3.0000
+   order_play           seat       uncalled_bet_size
+ Min.   :0.00000   Min.   :1.000   Min.   :   0.000
+ 1st Qu.:0.00000   1st Qu.:2.000   1st Qu.:   0.000
+ Median :0.00000   Median :3.000   Median :   0.000
+ Mean   :0.09193   Mean   :3.694   Mean   :   1.383
+ 3rd Qu.:0.00000   3rd Qu.:5.000   3rd Qu.:   0.000
+ Max.   :2.00000   Max.   :9.000   Max.   :4602.950
+ num [1:9310075, 1:16] 1 1 1 1 1 1 1 1 1 1 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:16] "game" "blnd" "hand" "seats" ...
+
+      0       1       2       3       4
+1862015 1862015 1862015 1862015 1862015
+
+      2       3       4       5       6       7       8       9
+ 570570      60  359600 1642925 3160110  510370 1447520 1618920
+
+      6
+9310075
+[1] "3 error correction starting"
+[1] "4 error correction over"
+[1] "before/after bins of singalled hand  strength (wagers) over all (old) and by street (new)"
+                                       V1
+1: 8.354219e-04,3.870968e-01,4.381667e+02
+   st                                     V1
+1:  1 1.700198e-03,4.285714e-01,4.381667e+02
+2:  2 8.354219e-04,3.076923e-01,5.176389e+01
+3:  3 9.505703e-04,2.946113e-01,2.944444e+01
+4:  4  0.001133787, 0.295454545,51.416666667
+    st extr1       N
+ 1:  0     1   57057
+ 2:  0     2 1804958
+ 3:  1     0 1401976
+ 4:  1     1  235356
+ 5:  1     2  224683
+ 6:  2     0 1714003
+ 7:  2     1   74514
+ 8:  2     2   73498
+ 9:  3     0 1787750
+10:  3     1   37133
+11:  3     2   37132
+12:  4     0 1817962
+13:  4     1   22047
+14:  4     2   22006
+[1] "extrinsic hand strength cut at"
+
+    [0.05,6] (6,4.92e+03]
+      874140       464279
+
+      0       1       2
+6721691  426107 2162277
+[1] 0
+[1] 4920.75
+[1] 0
+[1] 915
+[1] 0
+[1] 78
+[1] 1338419
+[1] "intrinsic strength cut at"
+
+    [2,1.06e+04] (1.06e+04,4e+08]
+          185674           184511
+[1] "if bets are a symbol of hand strength, this should be positive because of all ins, but if bets are a description of losses, this
+should be zero, or as close to as possible:"
+            skill_real         skill_real_abs skill_real_uncorrected
+             -125096.5             23426939.4            -10549627.4
+
+[-9.46e+03,-172]      (-172,47.2]  (47.2,1.04e+04]
+            2389             2388             2389
+[1] "skill cut at 0"
+[1] "# players: 7166"
+[1] "# players with < 100 hands played: 5101"
+[1] "# profitable players: 2971"
+[1] "# profitable players with >= 100 hands: 1067"
+[1] "# unprofitable players with >= 100 hands: 998"
+
+   0    1    2
+ 998 5101 1067
+
+[-9.46e+03,-198]         (-198,0]
+            2138             2138
+Loading required package: gsubfn
+Loading required package: proto
+Loading required package: RSQLite
+Warning message:
+no DISPLAY variable so Tk is not available
+  blnd skill n_players AVG(hand_n) MEDIAN(hand_n) MIN(hand_n) MAX(hand_n)
+1    6     0       998   713.54509            210         100       22304
+2    6     1      5101    30.96648             23           1          99
+3    6     2      1067   929.65042            260         100       21287
