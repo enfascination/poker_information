@@ -28,41 +28,37 @@ fromHandStreetPlayer:
 discoveryRep:
 	make fromHandStreetBig
 
-version = 63
+VERSION = 64
 
 fromHandStreet:
-	#./buildpokerdistribution020.r --tag=hash_wagers --reps=50 --version=$(version)
-	./buildpokerdistribution020.r --tag=hash_actions --reps=50 --version=$(version)
-	./buildpokerdistribution020.r --tag=actions_unordered --reps=50 --version=$(version)
-	./buildpokerdistribution020.r --tag=actions_shownhands --reps=50 --version=$(version)
-
-fromHandStreetDoover:
-	./buildpokerdistribution020.r --tag=hash_wagers --reps=5 --quiet --version=$(version) 
-	./buildpokerdistribution020.r --tag=wagers_shownhands --quiet --reps=500 --version=$(version) 
+	#./buildpokerdistribution020.r --tag=hash_wagers --reps=50 --quiet --version=$(VERSION)
+	./buildpokerdistribution020.r --tag=hash_actions --reps=50 --quiet --version=$(VERSION)
+	./buildpokerdistribution020.r --tag=actions_unordered --reps=50 --quiet --version=$(VERSION)
+	./buildpokerdistribution020.r --tag=actions_shownhands --reps=50 --quiet --version=$(VERSION)
 
 fromHandStreetBig:
-	#./buildpokerdistribution020.r --tag=hash_wagers --reps=500 --quiet --version=$(version)
-	./buildpokerdistribution020.r --tag=hash_actions --reps=500 --quiet --version=$(version)
-	./buildpokerdistribution020.r --tag=actions_shownhands --reps=500 --quiet --version=$(version)
-	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(version)
+	./buildpokerdistribution020.r --tag=hash_wagers --reps=500 --quiet --version=$(VERSION)
+	#./buildpokerdistribution020.r --tag=hash_actions --reps=500 --quiet --version=$(VERSION)
+	./buildpokerdistribution020.r --tag=wagers_shownhands --reps=500 --quiet --version=$(VERSION)
+	./buildpokerdistribution020.r --tag=wagers_unordered --reps=500 --quiet --version=$(VERSION)
 
 #make -j fromHandStreetBigPar
 fromHandStreetBigPar: par1 par2 par3
 	echo making all
 par1:
-	#./buildpokerdistribution020.r --tag=hash_wagers --reps=500 --quiet --version=$(version)
-	./buildpokerdistribution020.r --tag=hash_actions --reps=500 --quiet --version=$(version)
+	#./buildpokerdistribution020.r --tag=hash_wagers --reps=500 --quiet --version=$(VERSION)
+	./buildpokerdistribution020.r --tag=hash_actions --reps=500 --quiet --version=$(VERSION)
 par2:
-	./buildpokerdistribution020.r --tag=actions_shownhands --reps=500 --quiet --version=$(version)
+	./buildpokerdistribution020.r --tag=actions_shownhands --reps=500 --quiet --version=$(VERSION)
 par3:
-	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(version)
+	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(VERSION)
 
 fromHandStreetTest:
 	./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
 	./pokergraphs020.r -v 0
 
 image:
-	./pokergraphs020.r -v $(version)
+	./pokergraphs020.r -v $(VERSION)
 	R CMD BATCH pokergraphs_supplementaryinformation010.r
 
 misc:
@@ -142,10 +138,11 @@ polarisSetup:
 polarisAnalysisSetup:
 	cp ~/projecto_staid/poker_information/PS*pokerhandrank.csv /scratch-ssd/f002mmt/
 	cp ~/projecto_staid/poker_information/PS0025pokerhandrank.csv.gz /scratch-ssd/f002mmt/
+	cp ~/projecto_staid/poker_information/63/* /scratch-ssd/f002mmt/
 	gunzip /scratch-ssd/f002mmt/PS0025pokerhandrank.csv.gz
 
 polarisAnalysisClean:
-	mkdir ~/projecto_staid/poker_information/$(version)
+	mkdir ~/projecto_staid/poker_information/$(VERSION)
 	mv ~/scratch_frey/PS*pokerhandrank.csv ~/projecto_staid/poker_information/63/
 	mv ~/scratch_frey/distrPS*.csv ~/projecto_staid/poker_information/63/
 
