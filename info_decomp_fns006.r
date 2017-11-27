@@ -72,6 +72,7 @@ build_poker_distribution_2p <- function(dist_l, indices=NA, ordered=F) {
   dist_2p_ss <- array(0, dim=c(3,3,3,3), dimnames=list("extr1"=NULL, "intr1"=NULL, "extr2"=NULL, "intr2"=NULL))
   dist_2p_fa <- array(0, dim=c(3,3,3,3), dimnames=list("extr1"=NULL, "intr1"=NULL, "extr2"=NULL, "intr2"=NULL))
   dist_2p_sa <- array(0, dim=c(3,3,3,3), dimnames=list("extr1"=NULL, "intr1"=NULL, "extr2"=NULL, "intr2"=NULL))
+  dist_2p_aa <- array(0, dim=c(3,3,3,3), dimnames=list("extr1"=NULL, "intr1"=NULL, "extr2"=NULL, "intr2"=NULL))
     #dist_1p_b[,,] <- 0
     dist_2p_ff[,,,] <- 0
     dist_2p_sf[,,,] <- 0
@@ -106,13 +107,16 @@ build_poker_distribution_2p <- function(dist_l, indices=NA, ordered=F) {
             if (picked_player == 0 ) {
               dist_2p_ff[idxs12] <- dist_2p_ff[idxs12] + 1 
               dist_2p_fa[idxs12] <- dist_2p_fa[idxs12] + 1
+              dist_2p_aa[idxs12] <- dist_2p_aa[idxs12] + 1
             } else {
               dist_2p_ff[idxs21] <- dist_2p_ff[idxs21] + 1
               dist_2p_fa[idxs21] <- dist_2p_fa[idxs21] + 1
+              dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
             }
           } else {
             dist_2p_ff[idxs21] <- dist_2p_ff[idxs21] + 1
             dist_2p_fa[idxs21] <- dist_2p_fa[idxs21] + 1
+            dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
           }
         }
         else if ((dist_l[i,"skil1"] == 1) && (dist_l[i,"skil2"] == 1)) {
@@ -120,13 +124,16 @@ build_poker_distribution_2p <- function(dist_l, indices=NA, ordered=F) {
             if (picked_player == 0 ) {
               dist_2p_ss[idxs12] <- dist_2p_ss[idxs12] + 1 
               dist_2p_sa[idxs12] <- dist_2p_sa[idxs12] + 1
+              dist_2p_aa[idxs12] <- dist_2p_aa[idxs12] + 1
             } else { 
               dist_2p_ss[idxs21] <- dist_2p_ss[idxs21] + 1
               dist_2p_sa[idxs21] <- dist_2p_sa[idxs21] + 1
+              dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
             }
           } else {
             dist_2p_ss[idxs21] <- dist_2p_ss[idxs21] + 1
             dist_2p_sa[idxs21] <- dist_2p_sa[idxs21] + 1
+            dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
           }
         }
         else if ((dist_l[i,"skil1"] == 1) && (dist_l[i,"skil2"] == 0)) {
@@ -134,44 +141,54 @@ build_poker_distribution_2p <- function(dist_l, indices=NA, ordered=F) {
             if (picked_player == 0 ) {
               dist_2p_sf[idxs12] <- dist_2p_sf[idxs12] + 1 
               dist_2p_sa[idxs12] <- dist_2p_sa[idxs12] + 1
+              dist_2p_aa[idxs12] <- dist_2p_aa[idxs12] + 1
             } else { 
               dist_2p_fa[idxs21] <- dist_2p_fa[idxs21] + 1
+              dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
             }
           } else {
             dist_2p_fa[idxs21] <- dist_2p_fa[idxs21] + 1
+            dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
           }
         }
         else if ((dist_l[i,"skil1"] == 0) && (dist_l[i,"skil2"] == 1)) {
           if(!ordered) { 
             if (picked_player == 0 ) {
               dist_2p_fa[idxs12] <- dist_2p_fa[idxs12] + 1
+              dist_2p_aa[idxs12] <- dist_2p_aa[idxs12] + 1
             } else { 
               dist_2p_sf[idxs21] <- dist_2p_sf[idxs21] + 1
               dist_2p_sa[idxs21] <- dist_2p_sa[idxs21] + 1
+              dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
             }
           } else {
             dist_2p_sf[idxs21] <- dist_2p_sf[idxs21] + 1
             dist_2p_sa[idxs21] <- dist_2p_sa[idxs21] + 1
+            dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
           }
         }
         else if ((dist_l[i,"skil1"] == 0.5) && (dist_l[i,"skil2"] == 0)) {
           if(ordered || (picked_player != 0 )) {
             dist_2p_fa[idxs21] <- dist_2p_fa[idxs21] + 1
+            dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
           }
         }
         else if ((dist_l[i,"skil1"] == 0.5) && (dist_l[i,"skil2"] == 1)) {
           if(ordered || (picked_player != 0 )) {
             dist_2p_sa[idxs21] <- dist_2p_sa[idxs21] + 1
+            dist_2p_aa[idxs21] <- dist_2p_aa[idxs21] + 1
           }
         } 
         else if ((dist_l[i,"skil1"] == 0) && (dist_l[i,"skil2"] == 0.5)) {
           if(!ordered && (picked_player == 0 )) {
             dist_2p_fa[idxs12] <- dist_2p_fa[idxs12] + 1
+            dist_2p_aa[idxs12] <- dist_2p_aa[idxs12] + 1
           }
         }
         else if ((dist_l[i,"skil1"] == 1) && (dist_l[i,"skil2"] == 0.5)) {
           if(!ordered && (picked_player == 0 )) {
             dist_2p_sa[idxs12] <- dist_2p_sa[idxs12] + 1
+            dist_2p_aa[idxs12] <- dist_2p_aa[idxs12] + 1
           }
         } 
         else if (((dist_l[i,"skil1"] == 0.5) && (dist_l[i,"skil2"] == 0.5))
@@ -187,6 +204,7 @@ build_poker_distribution_2p <- function(dist_l, indices=NA, ordered=F) {
     dist_2p$ff <- dist_2p_ff
     dist_2p$fa <- dist_2p_fa
     dist_2p$sa <- dist_2p_sa
+    dist_2p$aa <- dist_2p_aa
     return(dist_2p)
   }
 
