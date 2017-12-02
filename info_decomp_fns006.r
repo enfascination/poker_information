@@ -379,7 +379,8 @@ get_statistics_2p_from_file <- function(input_file, specific=NA, quiet=FALSE, on
 		get_statistics_2p(censor_dist(distributions[[1]]$fa, onlyObservedHands=onlyObsHands), specific=specific, quiet=quiet), 
 		get_statistics_2p(censor_dist(distributions[[1]]$sf, onlyObservedHands=onlyObsHands), specific=specific, quiet=quiet), 
 		get_statistics_2p(censor_dist(distributions[[1]]$ff, onlyObservedHands=onlyObsHands), specific=specific, quiet=quiet), 
-		rev.along=0, new.names=list(NULL, c("sa", "fa", "sf", "ff")))
+		get_statistics_2p(censor_dist(distributions[[1]]$aa, onlyObservedHands=onlyObsHands), specific=specific, quiet=quiet), 
+		rev.along=0, new.names=list(NULL, c("sa", "fa", "sf", "ff", "aa")))
   if(length(distributions)<=1) {
     ### make it into three  dimensions, adding empty trivial d to the first d
     statistics <- abind(statistics, along=0)
@@ -392,6 +393,7 @@ get_statistics_2p_from_file <- function(input_file, specific=NA, quiet=FALSE, on
 		get_statistics_2p(censor_dist(distributions[[j]]$fa, onlyObservedHands=onlyObsHands), specific=specific, quiet=quiet), 
 		get_statistics_2p(censor_dist(distributions[[j]]$sf, onlyObservedHands=onlyObsHands), specific=specific, quiet=quiet), 
 		get_statistics_2p(censor_dist(distributions[[j]]$ff, onlyObservedHands=onlyObsHands), specific=specific, quiet=quiet), 
+		get_statistics_2p(censor_dist(distributions[[j]]$aa, onlyObservedHands=onlyObsHands), specific=specific, quiet=quiet), 
 		rev.along=0), along=along)
     }
   }
@@ -483,7 +485,7 @@ build_stat_long_2p <- function(statistics) {
   #stat_long$ti[stat_long$setting=="ff"] <-  stat_long[(stat_long$setting=="ff")&(stat_long$q=="ti"),"val"]  
   #stat_long$ti[stat_long$setting=="ss"] <-  stat_long[(stat_long$setting=="ss")&(stat_long$q=="ti"),"val"]  
   #stat_long$ti[stat_long$setting=="sf"] <-  stat_long[(stat_long$setting=="sf")&(stat_long$q=="ti"),"val"]  
-  stat_long <- rbind(stat_long, stat_long_normalized(stat_long[stat_long$setting=="ff",], "ff"), stat_long_normalized(stat_long[stat_long$setting=="sf",], "sf"), stat_long_normalized(stat_long[stat_long$setting=="sa",], "sa"), stat_long_normalized(stat_long[stat_long$setting=="fa",], "fa"))
+  stat_long <- rbind(stat_long, stat_long_normalized(stat_long[stat_long$setting=="ff",], "ff"), stat_long_normalized(stat_long[stat_long$setting=="sf",], "sf"), stat_long_normalized(stat_long[stat_long$setting=="sa",], "sa"), stat_long_normalized(stat_long[stat_long$setting=="fa",], "fa"), stat_long_normalized(stat_long[stat_long$setting=="aa",], "aa"))
 
   stat_long$q <- factor(stat_long$q)
   stat_long$setting <- with(stat_long, ifelse(setting=="ss", "Shark v Shark", stat_long$setting))
@@ -491,6 +493,7 @@ build_stat_long_2p <- function(statistics) {
   stat_long$setting <- with(stat_long, ifelse(setting=="sf", "Shark v Fish", stat_long$setting))
   stat_long$setting <- with(stat_long, ifelse(setting=="fa", "Fish v Other", stat_long$setting))
   stat_long$setting <- with(stat_long, ifelse(setting=="sa", "Shark v Other", stat_long$setting))
+  stat_long$setting <- with(stat_long, ifelse(setting=="aa", "All v All", stat_long$setting))
   stat_long$setting <- factor(stat_long$setting)
   return(stat_long)
 }

@@ -1,4 +1,8 @@
 #!/usr/bin/env Rscript
+
+	#mkdir ~/lib
+	#mkdir ~/lib/RPackages
+	#export R_LIBS_USER="~sfrey/lib/RPackages"
 packageLoad<-function(libName){
       # try to load the package
       if (!require(libName,character.only = TRUE)){ 
