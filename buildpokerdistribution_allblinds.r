@@ -127,7 +127,7 @@ for(ib in 1:length(blinds_coarse)) {
                                           )
 }
 stat_long_2p <- rbind(stat_long_2p_list[[1]])
-if( length(stat_long_2p_list) > 1 ) {
+if( length(blinds_coarse) > 1 ) {
 	for (i in 2:length(stat_long_2p_list)) {
 		stat_long_2p <- rbind(stat_long_2p, stat_long_2p_list[[i]])
 	}
@@ -155,10 +155,8 @@ for(ib in 1:length(blinds_coarse)) {
     }
 }
 stat_long_2p_spec <- rbind(stat_long_2p_spec_list[[1]])
-if (length(stat_long_2p_spec_list) > 1) {
-	for (i in 2:length(stat_long_2p_spec_list)) {
-		stat_long_2p_spec <- rbind(stat_long_2p_spec, stat_long_2p_spec_list[[i]])
-	}
+for (i in 2:length(stat_long_2p_spec_list)) {
+	stat_long_2p_spec <- rbind(stat_long_2p_spec, stat_long_2p_spec_list[[i]])
 }
 stat_long_2p_spec <- stat_long_spec_normalized_patch(stat_long_2p_spec, skip=TRUE)  ### I no longer need to normalize ever beause I'm not plotting perentages but raw information in bits. duh.
 stat_long_2p_spec_new <- stat_long_2p_spec 
@@ -167,22 +165,6 @@ stat_long_2p_spec_new <- stat_long_2p_spec
 ###    WRITE ALL SAMPLINGS OF ALL DISTS
 if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness analysis)
     print("information decomposition by street")
-    if (FALSE) { ### this step is now refactored into above
-    n_streets <- 4
-    ### bigger blinds
-    dist_l  <- data.table()
-    for(ib in 1:(length(blinds_fine))) {
-        print(blinds_fine[ib])
-        in_file <- paste0(path_poker_data_in, "distrPS", blinds_fine[ib], ".csv")
-        tmp <- fread(in_file)
-        tmp[,hand:=as.integer64(hand)]
-        dist_l <- rbind(dist_l, tmp)
-    }
-    for(st in 1:n_streets) {
-        out_file <- paste0(path_poker_data_out, "poker_distributions_2p_PS_", "all", "_st", st, ".Rdata")
-        bootstrap_distributions_to_file(data.matrix(dist_l[street==st]), output_file=out_file, reps, ordered=tagopts$ordered, extrAsWagerOrAction=tagopts$extr)
-    }
-    }
     ###    RELOAD THE BY STREET SAMPLES THEN CONSOLIDATE
     stat_long_2p_st_list <- rep(list(0),length(blinds_coarse) * n_streets)
     il <- 1
@@ -199,10 +181,8 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
         }
     }
     stat_long_2p_st <- rbind(stat_long_2p_st_list[[1]])
-	if (length(stat_long_2p_st_list) > 1) {
-		for (i in 2:length(stat_long_2p_st_list)) {
-			stat_long_2p_st <- rbind(stat_long_2p_st, stat_long_2p_st_list[[i]])
-		}
+	for (i in 2:length(stat_long_2p_st_list)) {
+		stat_long_2p_st <- rbind(stat_long_2p_st, stat_long_2p_st_list[[i]])
 	}
     #objsToSave <- c("stat_long_2p_st")
     objsToSave <- c("stat_long_2p", "stat_long_2p_spec", "stat_long_2p_st")
