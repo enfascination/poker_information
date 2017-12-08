@@ -127,8 +127,10 @@ for(ib in 1:length(blinds_coarse)) {
                                           )
 }
 stat_long_2p <- rbind(stat_long_2p_list[[1]])
-for (i in 2:length(stat_long_2p_list)) {
-    stat_long_2p <- rbind(stat_long_2p, stat_long_2p_list[[i]])
+if( length(stat_long_2p_list) > 1 ) {
+	for (i in 2:length(stat_long_2p_list)) {
+		stat_long_2p <- rbind(stat_long_2p, stat_long_2p_list[[i]])
+	}
 }
 
 stat_long_2p_new <- stat_long_2p
@@ -153,8 +155,10 @@ for(ib in 1:length(blinds_coarse)) {
     }
 }
 stat_long_2p_spec <- rbind(stat_long_2p_spec_list[[1]])
-for (i in 2:length(stat_long_2p_spec_list)) {
-    stat_long_2p_spec <- rbind(stat_long_2p_spec, stat_long_2p_spec_list[[i]])
+if (length(stat_long_2p_spec_list) > 1) {
+	for (i in 2:length(stat_long_2p_spec_list)) {
+		stat_long_2p_spec <- rbind(stat_long_2p_spec, stat_long_2p_spec_list[[i]])
+	}
 }
 stat_long_2p_spec <- stat_long_spec_normalized_patch(stat_long_2p_spec, skip=TRUE)  ### I no longer need to normalize ever beause I'm not plotting perentages but raw information in bits. duh.
 stat_long_2p_spec_new <- stat_long_2p_spec 
@@ -195,9 +199,11 @@ if( tagopts$onestreet == FALSE  ) { ### (skip if this is a one-street robustness
         }
     }
     stat_long_2p_st <- rbind(stat_long_2p_st_list[[1]])
-    for (i in 2:length(stat_long_2p_st_list)) {
-        stat_long_2p_st <- rbind(stat_long_2p_st, stat_long_2p_st_list[[i]])
-    }
+	if (length(stat_long_2p_st_list) > 1) {
+		for (i in 2:length(stat_long_2p_st_list)) {
+			stat_long_2p_st <- rbind(stat_long_2p_st, stat_long_2p_st_list[[i]])
+		}
+	}
     #objsToSave <- c("stat_long_2p_st")
     objsToSave <- c("stat_long_2p", "stat_long_2p_spec", "stat_long_2p_st")
 } else {

@@ -53,6 +53,7 @@ par2:
 par3:
 	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(VERSION)
 
+#make -j fromHandStreetBigMonolithWagersWinners
 fromHandStreetBigMonolithWagersWinners: parr1 parr2 parr3
 	echo making all
 parr1:
