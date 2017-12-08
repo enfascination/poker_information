@@ -28,7 +28,7 @@ fromHandStreetPlayer:
 discoveryRep:
 	make fromHandStreetBig
 
-VERSION = 64
+VERSION = 65
 
 fromHandStreet:
 	#./buildpokerdistribution020.r --tag=hash_wagers --reps=50 --quiet --version=$(VERSION)
@@ -53,8 +53,21 @@ par2:
 par3:
 	./buildpokerdistribution020.r --tag=actions_unordered --reps=500 --quiet --version=$(VERSION)
 
+fromHandStreetBigMonolithWagersWinners: parr1 parr2 parr3
+	echo making all
+parr1:
+	./buildpokerdistribution_allblinds.r --tag=hash_actions --reps=500 --quiet --version=$(VERSION)
+	./buildpokerdistribution_allblinds.r --tag=hash_wagers --reps=500 --quiet --version=$(VERSION)
+parr2:
+	./buildpokerdistribution_allblinds.r --tag=actions_shownhands --reps=500 --quiet --version=$(VERSION)
+	./buildpokerdistribution_allblinds.r --tag=wagers_shownhands --reps=500 --quiet --version=$(VERSION)
+parr3:
+	./buildpokerdistribution_allblinds.r --tag=actions_unordered --reps=500 --quiet --version=$(VERSION)
+	./buildpokerdistribution_allblinds.r --tag=wagers_unordered --reps=500 --quiet --version=$(VERSION)
+
 fromHandStreetTest:
 	./buildpokerdistribution020.r --tag=test --reps=1 --version=0 --quiet
+	#./buildpokerdistribution_allblinds.r --tag=test --reps=1 --version=0 --quiet
 	./pokergraphs020.r -v 0
 
 image:
